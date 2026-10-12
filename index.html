@@ -755,7 +755,7 @@
       <section id="catalog">
         <div class="container">
           <div class="section-head">
-            <h2>Alət kataloqu</h2>
+            <h2>128 AI alət kataloqu</h2>
             <p>Axtarış və kateqoriyalarla alətləri tez tapın.</p>
           </div>
 
@@ -764,11 +764,14 @@
               <input id="toolSearch" class="filter-input" type="text" placeholder="Alət axtarın..." />
               <div class="filter-chips">
                 <button class="chip active" data-filter="all">Bütün</button>
-                <button class="chip" data-filter="design">Dizayn</button>
-                <button class="chip" data-filter="code">Kod</button>
-                <button class="chip" data-filter="marketing">Marketinq</button>
-                <button class="chip" data-filter="research">Araşdırma</button>
-                <button class="chip" data-filter="productivity">Produktivlik</button>
+                <button class="chip" data-filter="yazı">Yazı</button>
+                <button class="chip" data-filter="dizayn">Dizayn</button>
+                <button class="chip" data-filter="kod">Kod</button>
+                <button class="chip" data-filter="marketinq">Marketinq</button>
+                <button class="chip" data-filter="araşdırma">Araşdırma</button>
+                <button class="chip" data-filter="produktivlik">Produktivlik</button>
+                <button class="chip" data-filter="video">Video</button>
+                <button class="chip" data-filter="satış">Satış</button>
               </div>
             </div>
 
@@ -783,6 +786,11 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>ChatGPT</td>
+                    <td>Yazı</td>
+                    <td>Qrafik düşüncə</td>
+                  </tr>
+                  <tr>
                     <td>Midjourney</td>
                     <td>Dizayn</td>
                     <td>Vizual konsept</td>
@@ -793,93 +801,16 @@
                     <td>Pair coding</td>
                   </tr>
                   <tr>
-                    <td>Notion AI</td>
-                    <td>Produktivlik</td>
-                    <td>Dokument və ideya</td>
-                  </tr>
-                  <tr>
-                    <td>Perplexity</td>
-                    <td>Araşdırma</td>
-                    <td>Bilgi tapma</td>
+                    <td>Frase</td>
+                    <td>Marketinq</td>
+                    <td>SEO məzmun</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div class="tool-grid" style="margin-top: 22px;">
-            <article class="tool-item" data-category="design" data-name="midjourney">
-              <div class="meta">
-                <h3>Midjourney</h3>
-                <span class="badge">Dizayn</span>
-              </div>
-              <p>Görselleştirilmiş konseptlər, posterlər və marka vizuaları üçün ideal AI vasitə.</p>
-              <footer>
-                <span>İstifadə: 4.9/5</span>
-                <span>Premium</span>
-              </footer>
-            </article>
-
-            <article class="tool-item" data-category="code" data-name="github-copilot">
-              <div class="meta">
-                <h3>GitHub Copilot</h3>
-                <span class="badge">Kod</span>
-              </div>
-              <p>Yazılım komandaları üçün AI assistan, sürətli kod yazımı və problem həlli.</p>
-              <footer>
-                <span>İstifadə: 4.8/5</span>
-                <span>Abunə</span>
-              </footer>
-            </article>
-
-            <article class="tool-item" data-category="marketing" data-name="frase">
-              <div class="meta">
-                <h3>Frase</h3>
-                <span class="badge">Marketinq</span>
-              </div>
-              <p>SEO, kontent strategiyası və axtarış optimizasiyası üçün məlumatlı AI alət.</p>
-              <footer>
-                <span>İstifadə: 4.7/5</span>
-                <span>Premium</span>
-              </footer>
-            </article>
-
-            <article class="tool-item" data-category="research" data-name="perplexity">
-              <div class="meta">
-                <h3>Perplexity</h3>
-                <span class="badge">Araşdırma</span>
-              </div>
-              <p>Ətraflı və dəqiq cavablar üçün AI axtarış asistanı, məlumatın tez özetlənməsi.</p>
-              <footer>
-                <span>İstifadə: 4.8/5</span>
-                <span>Freemium</span>
-              </footer>
-            </article>
-
-            <article class="tool-item" data-category="productivity" data-name="notion-ai">
-              <div class="meta">
-                <h3>Notion AI</h3>
-                <span class="badge">Produktivlik</span>
-              </div>
-              <p>Dokumentlər, ideyalar, komanda qeydləri və iş axını üçün güclü AI köməkçisi.</p>
-              <footer>
-                <span>İstifadə: 4.6/5</span>
-                <span>Abunə</span>
-              </footer>
-            </article>
-
-            <article class="tool-item" data-category="design" data-name="canva-ai">
-              <div class="meta">
-                <h3>Canva AI</h3>
-                <span class="badge">Dizayn</span>
-              </div>
-              <p>Brend elementləri, təqdimatlar və social media qrafikaları üçün sürətli arayüz.</p>
-              <footer>
-                <span>İstifadə: 4.7/5</span>
-                <span>Freemium</span>
-              </footer>
-            </article>
-          </div>
+          <div id="toolGrid" class="tool-grid" style="margin-top: 22px;"></div>
         </div>
       </section>
 
@@ -936,7 +867,7 @@
             <div class="cta-banner-inner">
               <div>
                 <h3>Yeni AI alətlərini tapmaq üçün hazırlaşırsınız?</h3>
-                <p>ToolBazaar ile teaminiz üçün ən uyğun AI stack-i tez seçin.</p>
+                <p>ToolBazaar ilə teaminiz üçün ən uyğun AI stack-i tez seçin.</p>
               </div>
               <a class="btn btn-primary" href="#top">Başlamaq</a>
             </div>
@@ -953,33 +884,172 @@
     </footer>
 
     <script>
+      const tools = [
+        { name: "ChatGPT", category: "yazı", tag: "Yazı", price: "Freemium", description: "Mətn, ideya və analitik cavablar üçün geniş AI asistan." },
+        { name: "Claude", category: "yazı", tag: "Yazı", price: "Freemium", description: "Uzun mətnlər və sənədlər ilə işləmək üçün güclü AI." },
+        { name: "Gemini", category: "yazı", tag: "Yazı", price: "Freemium", description: "Axtarış, yazı və multimodal işlər üçün Google AI." },
+        { name: "Perplexity", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Axtarış əsasında məlumat və mənbə əsaslı cavablar." },
+        { name: "Jasper", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Kampaniya və SEO üçün AI mətn yaradıcısı." },
+        { name: "Copy.ai", category: "marketinq", tag: "Marketinq", price: "Freemium", description: "Reklam, e-poçt və sosial media üçün mətn." },
+        { name: "Writesonic", category: "marketinq", tag: "Marketinq", price: "Freemium", description: "SEO məzmun və satış yazıları üçün AI platforma." },
+        { name: "Rytr", category: "yazı", tag: "Yazı", price: "Freemium", description: "Hızlı blog, e-poçt və reklam mətnləri." },
+        { name: "GrammarlyGO", category: "yazı", tag: "Yazı", price: "Freemium", description: "Yazı tərtibatı və stil dəyişikliyi üçün AI." },
+        { name: "Anyword", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Reklam və konversiya optimizasiyası üçün AI yazı." },
+        { name: "Sudowrite", category: "yazı", tag: "Yazı", price: "Abunə", description: "Roman və hekayə yazımı üçün kreativ AI." },
+        { name: "NovelAI", category: "yazı", tag: "Yazı", price: "Abunə", description: "Yazı və hikayət yaradıcısı üçün xüsusi AI." },
+        { name: "QuillBot", category: "yazı", tag: "Yazı", price: "Freemium", description: "Parafoz və mətn sadələşdirilməsi." },
+        { name: "Hemingway AI", category: "yazı", tag: "Yazı", price: "Freemium", description: "Mətnin anlaşılırlığını artıran yazı aləti." },
+        { name: "Wordtune", category: "yazı", tag: "Yazı", price: "Freemium", description: "Mətnin ifadəsini və üslubunu düzeldir." },
+        { name: "Scale AI", category: "araşdırma", tag: "Araşdırma", price: "Abunə", description: "Veri etiketləmə və model öyrənməsində AI platforma." },
+        { name: "Midjourney", category: "dizayn", tag: "Dizayn", price: "Abunə", description: "Gözəl görsel konseptlər və stil rəsm üçün AI." },
+        { name: "DALL·E 3", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Mətnə əsaslanan vizual yaradıcı model." },
+        { name: "Stable Diffusion", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Açıq modellə yaradıcı və xüsusi rəsmlər." },
+        { name: "Adobe Firefly", category: "dizayn", tag: "Dizayn", price: "Abunə", description: "Adobe məhsullarında AI yaratma və redaktə." },
+        { name: "Canva AI", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Dizayn, banner və social media materialı." },
+        { name: "Runway", category: "video", tag: "Video", price: "Freemium", description: "AI video yaradılması və redaktəsi." },
+        { name: "Pika", category: "video", tag: "Video", price: "Freemium", description: "Video və animasiya yaradıcı AI." },
+        { name: "Ideogram", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Logo və metin əsaslı vizual yaradıcı." },
+        { name: "Leonardo AI", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "İllüstrasiya, oyun və konsept dizaynları." },
+        { name: "Playground AI", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Stil və vizual konseptlər üçün AI." },
+        { name: "NightCafe", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "İllüstrasiya və poster yaradıcı AI." },
+        { name: "Dream by WOMBO", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Mobil üçün sürətli AI təsvir yaradıcı." },
+        { name: "Photoroom", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Fotoların arxa planını və məhsul çəkimini təmizləyir." },
+        { name: "Remove.bg", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Fotolardan fonu avtomatik silir." },
+        { name: "Clipdrop", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "AI ilə qrafik və şəkil-redaktə alətləri." },
+        { name: "Deep Dream Generator", category: "dizayn", tag: "Dizayn", price: "Freemium", description: "Əsrarətli və vizual effektli şəkil yaratmaq." },
+        { name: "GitHub Copilot", category: "kod", tag: "Kod", price: "Abunə", description: "Kod yazımını, izahını və tövsiyəsini edən AI." },
+        { name: "Cursor", category: "kod", tag: "Kod", price: "Freemium", description: "Kod editoru ilə AI-assisted inkişaf." },
+        { name: "Tabnine", category: "kod", tag: "Kod", price: "Freemium", description: "Kod autocompletion və AI kod köməyi." },
+        { name: "Codeium", category: "kod", tag: "Kod", price: "Freemium", description: "Kod yazımında sürətli AI asistan." },
+        { name: "Replit AI", category: "kod", tag: "Kod", price: "Freemium", description: "Browser əsaslı kod yazımı və işə salınma." },
+        { name: "Amazon CodeWhisperer", category: "kod", tag: "Kod", price: "Freemium", description: "AWS ekosistemində kod AI asistanı." },
+        { name: "Sourcegraph Cody", category: "kod", tag: "Kod", price: "Freemium", description: "Kod bazası üzərində AI axtarış və referens." },
+        { name: "Cline", category: "kod", tag: "Kod", price: "Freemium", description: "Terminal və tətbiq daxilində AI dəstəyi." },
+        { name: "OpenHands", category: "kod", tag: "Kod", price: "Açıq", description: "Açıq mənbəli AI developer asistanı." },
+        { name: "Aider", category: "kod", tag: "Kod", price: "Açıq", description: "AI ilə kod yeniləmə və refactoring." },
+        { name: "CodeRabbit", category: "kod", tag: "Kod", price: "Freemium", description: "PR və kod nəzərdən keçirmə üçün AI." },
+        { name: "Snyk AI", category: "kod", tag: "Kod", price: "Abunə", description: "Təhlükəsizlik və kod zəiflikləri üçün AI." },
+        { name: "Blackbox AI", category: "kod", tag: "Kod", price: "Freemium", description: "Kod tapma və yazma asistanı." },
+        { name: "Continue", category: "kod", tag: "Kod", price: "Açıq", description: "Editor daxilində AI kod köməkçisi." },
+        { name: "Debuild", category: "kod", tag: "Kod", price: "Freemium", description: "Mikroservislər üçün AI inkişaf dəstəyi." },
+        { name: "AskCodi", category: "kod", tag: "Kod", price: "Freemium", description: "Kod yaratmaq və izah etmək üçün AI." },
+        { name: "Frase", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "SEO və məzmuna əsaslı marketinq AI." },
+        { name: "Surfer SEO", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Məzmuna əsaslı axtarış optimizasiyası." },
+        { name: "Neuron Writer", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "SEO məzmun planı və optimizasiya." },
+        { name: "MarketMuse", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Məzmuna əsaslı marketinq və strategiya." },
+        { name: "Semrush Copilot", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "SEO ilə bağlı AI təkliflər və analizlər." },
+        { name: "Ahrefs AI", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Axtarış və backlink strategiyası üçün AI." },
+        { name: "Outranking", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Məzmun planlaması və AI optimizasiya." },
+        { name: "GrowthBar", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "SEO və ruzmet analitikləri ilə AI." },
+        { name: "StoryChief", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Məzmun və marketing workflow üçün AI." },
+        { name: "CoSchedule AI", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Planlama və content optimization AI." },
+        { name: "AdCreative.ai", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Reklam kreativi və banner üçün AI." },
+        { name: "Phrasee", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "E-poçt və reklam copywriting AI." },
+        { name: "Omnisend AI", category: "marketinq", tag: "Marketinq", price: "Freemium", description: "E-poçt marketinqi üçün avtomatlaşdırıcı AI." },
+        { name: "Persado", category: "marketinq", tag: "Marketinq", price: "Abunə", description: "Kreativ mesaj və konversiya optimizasiyası." },
+        { name: "HubSpot AI", category: "satış", tag: "Satış", price: "Freemium", description: "CRM və satış prosesləri üçün AI." },
+        { name: "Elicit", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Elmi və akademik araşdırma üçün AI." },
+        { name: "Consensus", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Elmi məqalələrə əsaslanan AI cavablar." },
+        { name: "Scite", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Məqalələrin sitat və dəyəri üçün AI." },
+        { name: "Semantic Scholar", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Elmi məqalə və texniki referans axtarışı." },
+        { name: "ResearchRabbit", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Məqalələr və inkişaf mövzularında əlaqələndirmə." },
+        { name: "Connected Papers", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Məqalələr arasında əlaqə quran AI." },
+        { name: "OpenAlex", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Açıq bibliometrik axtarış platforması." },
+        { name: "NotebookLM", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Məzmunlar üzərində AI-əsaslı öyrənmə." },
+        { name: "Paperpal", category: "araşdırma", tag: "Araşdırma", price: "Abunə", description: "Akademik yazı və məqalə dəstəyi." },
+        { name: "Explainpaper", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Elmi məqalələri sadələşdirən AI." },
+        { name: "Unriddle", category: "araşdırma", tag: "Araşdırma", price: "Freemium", description: "Mətn və sənəd axtarışı üçün AI." },
+        { name: "Gensim", category: "araşdırma", tag: "Araşdırma", price: "Açıq", description: "Metod və NLP üçün AI/ML vasitələri." },
+        { name: "Zettlr", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Mətn, not və araşdırma işinin idarə edilməsi." },
+        { name: "Notion AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Notion daxilində yazı, plan və fikir asistanı." },
+        { name: "ClickUp AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Task, dokument və iş axını AI asistanı." },
+        { name: "Asana AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Komanda planlaması və iş avtomatlaşdırılması." },
+        { name: "Trello AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "İş lövhəsi və task prioritizasiya." },
+        { name: "Slack AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Komanda yazışmalarında AI özet və tapşırıq." },
+        { name: "Zapier AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "İş axını avtomatlaşdırması və AI triggerləri." },
+        { name: "Airtable AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Veri, CRM və işin idarə edilməsi." },
+        { name: "Monday AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "İşin planlaşdırılması və komandaya dəstək." },
+        { name: "Motion", category: "produktivlik", tag: "Produktivlik", price: "Abunə", description: "Vaxt planlaması və iş rejimi optimizasiyası." },
+        { name: "Todoist AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Tapşırıq prioritizasiya və planlama." },
+        { name: "Evernote AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Notlar və ideyalar üçün AI asistan." },
+        { name: "Miro AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Board və brainstorming üçün AI." },
+        { name: "Loom AI", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Video qeyd və özet üçün AI." },
+        { name: "Otter.ai", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Zəng və görüş avtomatik transkriptləri." },
+        { name: "Fireflies.ai", category: "produktivlik", tag: "Produktivlik", price: "Freemium", description: "Görüş qeyd və özet AI asistanı." },
+        { name: "Descript", category: "video", tag: "Video", price: "Freemium", description: "Video redaktə və səsin AI ilə təmizlənməsi." },
+        { name: "Veed", category: "video", tag: "Video", price: "Freemium", description: "Mətn və video redaktə üçün AI." },
+        { name: "OpusClip", category: "video", tag: "Video", price: "Freemium", description: "Uzun videoları qısa, istifadə olunan kliplərə çevirir." },
+        { name: "Submagic", category: "video", tag: "Video", price: "Freemium", description: "Video alt yazıları və sosial media klipləri." },
+        { name: "Captions", category: "video", tag: "Video", price: "Freemium", description: "AI ilə video dublyaj və alt yazı." },
+        { name: "HeyGen", category: "video", tag: "Video", price: "Freemium", description: "Avatar və AI video presenterlər." },
+        { name: "Synthesia", category: "video", tag: "Video", price: "Abunə", description: "AI avatarlarla video yaradılması." },
+        { name: "Tavus", category: "video", tag: "Video", price: "Abunə", description: "Şəxsi və dinamik AI video avatarlar." },
+        { name: "ElevenLabs", category: "video", tag: "Video", price: "Freemium", description: "Səs və tələffüz üçün AI tələffüz motoru." },
+        { name: "Murf", category: "video", tag: "Video", price: "Freemium", description: "Səs və podcast üçün AI tələffüz." },
+        { name: "Podcastle", category: "video", tag: "Video", price: "Freemium", description: "Podcast və səs yaratmaq üçün AI." },
+        { name: "Krisp", category: "video", tag: "Video", price: "Freemium", description: "Zənglərdə səs şüurlə aradan qaldıran AI." },
+        { name: "Cleanvoice", category: "video", tag: "Video", price: "Freemium", description: "Səsləri təmizləyən AI audio redaktor." },
+        { name: "Adobe Podcast", category: "video", tag: "Video", price: "Freemium", description: "Audio təmizləmə və transkripsiya." },
+        { name: "Clipchamp AI", category: "video", tag: "Video", price: "Freemium", description: "Video redaktə və AI asistanı." },
+        { name: "Kapwing AI", category: "video", tag: "Video", price: "Freemium", description: "Video, GIF və subititle yaratmaq." },
+        { name: "Intercom Fin", category: "satış", tag: "Satış", price: "Abunə", description: "Müştəri dəstəyi və chatbot AI." },
+        { name: "Zendesk AI", category: "satış", tag: "Satış", price: "Abunə", description: "Dəstək və yardım prosesləri üçün AI." },
+        { name: "Drift", category: "satış", tag: "Satış", price: "Abunə", description: "Satış chatbot və pipeline avtomatlaşdırması." },
+        { name: "Salesforce Einstein", category: "satış", tag: "Satış", price: "Abunə", description: "CRM və satış analitikləri üçün AI." },
+        { name: "Freshdesk AI", category: "satış", tag: "Satış", price: "Abunə", description: "Dəstək sorğuları üçün AI avtomatlaşdırma." },
+        { name: "Kustomer AI", category: "satış", tag: "Satış", price: "Abunə", description: "Müştəri xidmətləri və satış operasiyalarını AI gücü ilə." },
+        { name: "Outreach AI", category: "satış", tag: "Satış", price: "Abunə", description: "Satış komandaları üçün outreach və pipeline AI." },
+        { name: "Rev AI", category: "satış", tag: "Satış", price: "Freemium", description: "Görüş, transkript və satış analitiklər." },
+        { name: "Chorus AI", category: "satış", tag: "Satış", price: "Abunə", description: "Satış görüşləri və pipeline analitikləri." },
+        { name: "Clari AI", category: "satış", tag: "Satış", price: "Abunə", description: "Forecasting və satış performansı üçün AI." },
+        { name: "Lusha AI", category: "satış", tag: "Satış", price: "Freemium", description: "Lead və kontak məlumatı üçün AI məlumat bazası." },
+        { name: "Gong", category: "satış", tag: "Satış", price: "Abunə", description: "Satış görüşləri və şərh analitikləri üçün AI." },
+        { name: "Lavender", category: "satış", tag: "Satış", price: "Freemium", description: "E-poçt yazımını optimizasiya edən satış AI." },
+        { name: "Apollo.io AI", category: "satış", tag: "Satış", price: "Freemium", description: "Lead tapma və outreach üçün satış AI." },
+        { name: "Pega AI", category: "satış", tag: "Satış", price: "Abunə", description: "İş prosesləri və customer journey AI." },
+        { name: "Gorgias AI", category: "satış", tag: "Satış", price: "Abunə", description: "E-commerce dəstək üçün AI chatbot." }
+      ];
+
+      const toolGrid = document.getElementById('toolGrid');
       const searchInput = document.getElementById('toolSearch');
       const chips = document.querySelectorAll('.chip');
-      const items = document.querySelectorAll('.tool-item');
       let activeFilter = 'all';
 
-      const applyFilters = () => {
-        const query = (searchInput.value || '').trim().toLowerCase();
-
-        items.forEach(item => {
-          const category = item.dataset.category;
-          const name = item.dataset.name || '';
-          const text = item.textContent.toLowerCase();
-          const matchesCategory = activeFilter === 'all' || category === activeFilter;
-          const matchesQuery = !query || text.includes(query) || name.includes(query);
-          item.classList.toggle('hidden', !(matchesCategory && matchesQuery));
+      function renderTools() {
+        const q = (searchInput.value || '').trim().toLowerCase();
+        const filtered = tools.filter(tool => {
+          const matchesCategory = activeFilter === 'all' || tool.category === activeFilter;
+          const haystack = `${tool.name} ${tool.description} ${tool.tag}`.toLowerCase();
+          const matchesQuery = !q || haystack.includes(q);
+          return matchesCategory && matchesQuery;
         });
-      };
 
-      searchInput.addEventListener('input', applyFilters);
+        toolGrid.innerHTML = filtered.map(tool => `
+          <article class="tool-item" data-category="${tool.category}">
+            <div class="meta">
+              <h3>${tool.name}</h3>
+              <span class="badge">${tool.tag}</span>
+            </div>
+            <p>${tool.description}</p>
+            <footer>
+              <span>${tool.price}</span>
+              <span>${tool.category}</span>
+            </footer>
+          </article>
+        `).join('');
+      }
+
+      searchInput.addEventListener('input', renderTools);
 
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           chips.forEach(c => c.classList.toggle('active', c === chip));
           activeFilter = chip.dataset.filter;
-          applyFilters();
+          renderTools();
         });
       });
+
+      renderTools();
     </script>
   </body>
 </html>
