@@ -3,30 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToolBazaar | AI Tools Marketplace</title>
-    <meta name="description" content="Discover and compare AI tools for productivity, marketing, design, coding, and business." />
+    <title>ToolBazaar | Discover 128+ AI Tools</title>
+    <meta name="description" content="ToolBazaar helps teams discover, compare, and choose the best AI tools for marketing, design, coding, research, and growth." />
     <style>
       :root {
-        --bg: #0b1020;
-        --panel: #121a2b;
-        --panel-2: #1a243c;
-        --text: #eaf2ff;
-        --muted: #9bb5d1;
+        --bg: #07111d;
+        --bg-2: #0d1a2b;
+        --panel: rgba(17, 25, 38, 0.8);
+        --panel-strong: #101c2d;
+        --panel-soft: #172534;
+        --text: #edf6ff;
+        --muted: #9eb7d1;
+        --line: rgba(255,255,255,0.08);
         --primary: #7c9cff;
-        --primary-2: #5ce1e6;
-        --accent: #90f7a7;
-        --border: rgba(255,255,255,0.08);
-        --shadow: rgba(0, 0, 0, 0.28);
+        --primary-2: #67e8f9;
+        --accent: #9ef7c5;
+        --accent-2: #f7e77d;
+        --shadow: rgba(0, 0, 0, 0.30);
       }
 
       * { box-sizing: border-box; }
-
       html { scroll-behavior: smooth; }
 
       body {
         margin: 0;
         font-family: Inter, "Segoe UI", Arial, sans-serif;
-        background: radial-gradient(circle at top, #151d31 0%, var(--bg) 40%, #090d18 100%);
+        background:
+          radial-gradient(circle at top, rgba(124, 156, 255, 0.18) 0%, rgba(124,156,255,0.04) 10%, transparent 25%),
+          linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%);
         color: var(--text);
         line-height: 1.6;
       }
@@ -42,16 +46,16 @@
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 20;
-        backdrop-filter: blur(12px);
-        background: rgba(11, 16, 32, 0.72);
-        border-bottom: 1px solid var(--border);
+        z-index: 30;
+        backdrop-filter: blur(14px);
+        background: rgba(7, 17, 29, 0.72);
+        border-bottom: 1px solid var(--line);
       }
 
       .nav {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
         min-height: 76px;
       }
 
@@ -60,17 +64,17 @@
         align-items: center;
         gap: 12px;
         font-weight: 800;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
       }
 
       .brand-mark {
         width: 34px;
         height: 34px;
         border-radius: 10px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #07111d;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #09111d;
         font-size: 18px;
         font-weight: 900;
       }
@@ -90,14 +94,14 @@
       }
 
       .btn {
-        border: 1px solid var(--border);
         border-radius: 999px;
         padding: 12px 18px;
         font-weight: 700;
-        transition: 0.2s ease;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid var(--line);
+        transition: 0.2s ease;
         cursor: pointer;
       }
 
@@ -105,9 +109,9 @@
 
       .btn-primary {
         background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #08111d;
+        color: #07111d;
         border-color: transparent;
-        box-shadow: 0 18px 32px rgba(124, 156, 255, 0.28);
+        box-shadow: 0 18px 32px rgba(124,156,255,0.28);
       }
 
       .btn-secondary {
@@ -116,13 +120,13 @@
       }
 
       .hero {
-        padding: 74px 0 40px;
+        padding: 84px 0 48px;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 52px;
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 56px;
         align-items: center;
       }
 
@@ -132,64 +136,65 @@
         gap: 8px;
         padding: 8px 12px;
         border-radius: 999px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         background: rgba(255,255,255,0.02);
         color: var(--muted);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
       }
 
       h1 {
         margin: 18px 0 16px;
-        font-size: clamp(2.7rem, 5vw, 5rem);
-        line-height: 0.96;
-        letter-spacing: -0.06em;
+        font-size: clamp(2.9rem, 5vw, 5.15rem);
+        line-height: 0.95;
+        letter-spacing: -0.07em;
       }
 
       .hero-copy p {
         margin: 0 0 28px;
         max-width: 620px;
+        font-size: 1.1rem;
         color: var(--muted);
-        font-size: 1.12rem;
       }
 
       .cta-row {
         display: flex;
-        gap: 16px;
         flex-wrap: wrap;
-        margin-bottom: 26px;
+        gap: 14px;
+        margin-bottom: 30px;
       }
 
       .stats {
         display: flex;
         flex-wrap: wrap;
-        gap: 26px;
+        gap: 24px;
       }
 
       .stat strong {
         display: block;
         font-size: 1.9rem;
-        line-height: 1;
+        letter-spacing: -0.05em;
       }
 
       .stat span {
+        display: block;
         color: var(--muted);
         font-size: 0.94rem;
       }
 
       .hero-card {
         background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-        border: 1px solid var(--border);
-        border-radius: 28px;
-        box-shadow: 0 28px 80px var(--shadow);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        box-shadow: 0 30px 80px var(--shadow);
         padding: 18px;
       }
 
-      .tool-window {
-        background: rgba(9, 13, 24, 0.8);
-        border: 1px solid var(--border);
+      .dashboard {
+        background: rgba(7, 17, 29, 0.9);
         border-radius: 22px;
+        border: 1px solid var(--line);
         overflow: hidden;
       }
 
@@ -198,7 +203,7 @@
         align-items: center;
         gap: 8px;
         padding: 12px 16px;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--line);
         background: rgba(255,255,255,0.02);
       }
 
@@ -213,46 +218,47 @@
       .dot.yellow { background: #fdbf40; }
       .dot.green { background: #47d566; }
 
-      .tool-body {
-        padding: 18px;
+      .dashboard-body {
+        padding: 20px;
       }
 
-      .search-box {
+      .search-pill {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         background: rgba(255,255,255,0.03);
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         border-radius: 14px;
         padding: 12px 14px;
         color: var(--muted);
       }
 
-      .search-box strong {
+      .search-pill strong {
         color: var(--text);
       }
 
       .mini-grid {
-        margin-top: 22px;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
+        margin-top: 20px;
       }
 
       .mini-card {
         background: rgba(255,255,255,0.02);
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         border-radius: 16px;
         padding: 16px;
       }
 
       .mini-card .tag {
-        font-size: 0.72rem;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--primary-2);
-        margin-bottom: 8px;
         display: inline-block;
+        margin-bottom: 8px;
+        color: var(--primary-2);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       .mini-card h3 {
@@ -262,25 +268,25 @@
 
       .mini-card p {
         margin: 0;
+        font-size: 0.92rem;
         color: var(--muted);
-        font-size: 0.9rem;
       }
 
       section {
-        padding: 50px 0;
+        padding: 54px 0;
       }
 
       .section-head {
         display: flex;
-        align-items: end;
         justify-content: space-between;
-        gap: 20px;
+        align-items: end;
+        gap: 18px;
         margin-bottom: 24px;
       }
 
       .section-head h2 {
         margin: 0;
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(2.1rem, 4vw, 3rem);
         letter-spacing: -0.05em;
       }
 
@@ -297,10 +303,9 @@
 
       .card {
         background: rgba(255,255,255,0.02);
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         border-radius: 22px;
-        padding: 22px;
-        box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        padding: 24px;
       }
 
       .card .icon {
@@ -309,13 +314,13 @@
         border-radius: 16px;
         display: grid;
         place-items: center;
+        background: linear-gradient(135deg, rgba(124,156,255,0.20), rgba(103,232,249,0.18));
         font-size: 24px;
         margin-bottom: 18px;
-        background: linear-gradient(135deg, rgba(124,156,255,0.18), rgba(92,225,230,0.2));
       }
 
       .card h3 {
-        margin: 0 0 8px;
+        margin: 0 0 10px;
         font-size: 1.35rem;
       }
 
@@ -325,9 +330,9 @@
       }
 
       .feature-band {
-        background: linear-gradient(180deg, rgba(124,156,255,0.08), rgba(17,24,39,0.12));
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(124,156,255,0.08), rgba(12, 21, 31, 0.2));
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
       }
 
       .feature-grid {
@@ -337,21 +342,73 @@
       }
 
       .feature {
-        padding: 22px 18px 16px;
-        border: 1px solid var(--border);
-        border-radius: 18px;
         background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 18px;
       }
 
       .feature strong {
         display: block;
         margin-bottom: 8px;
-        font-size: 1rem;
       }
 
       .feature span {
         color: var(--muted);
         font-size: 0.94rem;
+      }
+
+      .compare-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 22px;
+      }
+
+      .compare-panel,
+      .compare-list {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 22px;
+      }
+
+      .compare-panel h3,
+      .compare-list h3 {
+        margin: 0 0 18px;
+        font-size: 1.4rem;
+      }
+
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .compare-table th,
+      .compare-table td {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .compare-table th {
+        color: var(--muted);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .compare-table td {
+        color: var(--text);
+      }
+
+      .compare-list ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .compare-list li {
+        margin-bottom: 12px;
       }
 
       .pricing-wrap {
@@ -362,26 +419,29 @@
 
       .price-card {
         background: rgba(255,255,255,0.02);
-        border: 1px solid var(--border);
+        border: 1px solid var(--line);
         border-radius: 24px;
         padding: 22px;
       }
 
       .price-card.featured {
-        background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(18,26,43,0.45));
+        background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(17, 24, 39, 0.55));
         border-color: rgba(124,156,255,0.35);
       }
 
-      .price-card .tag {
+      .tag {
+        display: inline-block;
         font-size: 0.72rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--primary-2);
+        font-weight: 800;
       }
 
       .price-card h3 {
         margin: 14px 0 12px;
-        font-size: 2rem;
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        letter-spacing: -0.05em;
       }
 
       .price-card p {
@@ -410,7 +470,7 @@
       }
 
       .footer {
-        border-top: 1px solid var(--border);
+        border-top: 1px solid var(--line);
         padding: 28px 0 60px;
         color: var(--muted);
       }
@@ -424,6 +484,7 @@
 
       @media (max-width: 980px) {
         .hero-grid,
+        .compare-grid,
         .cards,
         .feature-grid,
         .pricing-wrap {
@@ -434,7 +495,6 @@
       }
 
       @media (max-width: 620px) {
-        h1 { letter-spacing: -0.04em; }
         .cta-row { flex-direction: column; }
         .cta-row .btn { width: 100%; }
         .stats { gap: 16px; }
@@ -452,8 +512,8 @@
         <nav class="nav-links" aria-label="Main menu">
           <a href="#tools">Tools</a>
           <a href="#features">Features</a>
+          <a href="#compare">Compare</a>
           <a href="#pricing">Pricing</a>
-          <a href="#about">About</a>
         </nav>
 
         <div class="nav-actions">
@@ -467,15 +527,15 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">✔ Trusted AI discovery</span>
+            <span class="eyebrow">✔ Discover the right AI stack</span>
             <h1>Find the best AI tools in one place.</h1>
             <p>
-              Search, compare, and choose the right AI products for marketing, design,
-              development, research, and business growth.
+              ToolBazaar helps teams discover, compare, and adopt AI products faster — from
+              marketing and design to coding, research, and business operations.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-primary" href="#tools">Browse tools</a>
+              <a class="btn btn-primary" href="#tools">Browse 128+ tools</a>
               <a class="btn btn-secondary" href="#pricing">Get started</a>
             </div>
 
@@ -496,15 +556,15 @@
           </div>
 
           <div class="hero-card" aria-label="AI tools preview">
-            <div class="tool-window">
+            <div class="dashboard">
               <div class="window-bar">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
               </div>
 
-              <div class="tool-body">
-                <div class="search-box">
+              <div class="dashboard-body">
+                <div class="search-pill">
                   <span>🔎</span>
                   <span><strong>Search:</strong> AI marketing tools</span>
                 </div>
@@ -513,25 +573,25 @@
                   <div class="mini-card">
                     <span class="tag">Design</span>
                     <h3>Midjourney</h3>
-                    <p>Image generation for concepts and campaigns.</p>
+                    <p>Image generation for concepts and brand campaigns.</p>
                   </div>
 
                   <div class="mini-card">
                     <span class="tag">Code</span>
                     <h3>GitHub Copilot</h3>
-                    <p>Developer assistant for shipping faster.</p>
+                    <p>Developer assistant for faster product delivery.</p>
                   </div>
 
                   <div class="mini-card">
                     <span class="tag">SEO</span>
                     <h3>Frase</h3>
-                    <p>Content research and optimization workflows.</p>
+                    <p>Research and content optimization for growth teams.</p>
                   </div>
 
                   <div class="mini-card">
                     <span class="tag">Sales</span>
                     <h3>Claude</h3>
-                    <p>AI writing and reasoning for business teams.</p>
+                    <p>AI reasoning and writing for business workflows.</p>
                   </div>
                 </div>
               </div>
@@ -544,44 +604,44 @@
         <div class="container">
           <div class="section-head">
             <h2>Explore AI categories</h2>
-            <p>Discover the tools your team needs most.</p>
+            <p>Find tools that match the way your team works.</p>
           </div>
 
           <div class="cards">
             <article class="card">
               <div class="icon">✍️</div>
               <h3>Writing</h3>
-              <p>Generate copy, blog drafts, product messaging, and ad variations in seconds.</p>
+              <p>Generate content, product copy, campaign ideas, and polished messaging.</p>
             </article>
 
             <article class="card">
               <div class="icon">🎨</div>
               <h3>Design</h3>
-              <p>Create concept art, brand visuals, landing page mockups, and campaign ideas.</p>
+              <p>Create art direction, landing pages, advertisements, and concept visuals.</p>
             </article>
 
             <article class="card">
               <div class="icon">💻</div>
               <h3>Coding</h3>
-              <p>Accelerate engineering with AI code generation, QA, and productivity tools.</p>
+              <p>Ship features faster with AI-powered code generation and QA workflows.</p>
             </article>
 
             <article class="card">
               <div class="icon">📈</div>
               <h3>Marketing</h3>
-              <p>Track performance and generate strategy across SEO, paid media, and content.</p>
+              <p>Supercharge campaign ideas, SEO, paid media, and content strategy.</p>
             </article>
 
             <article class="card">
               <div class="icon">🔍</div>
               <h3>Research</h3>
-              <p>Summarize information, analyze trends, and synthesize data with working AI.</p>
+              <p>Analyze trends, summarize findings, and transform raw data into action.</p>
             </article>
 
             <article class="card">
               <div class="icon">📦</div>
               <h3>Business</h3>
-              <p>Improve onboarding, sales enablement, support workflows, and executive ops.</p>
+              <p>Improve operations, customer support, sales workflows, and team output.</p>
             </article>
           </div>
         </div>
@@ -590,26 +650,82 @@
       <section class="feature-band" id="features">
         <div class="container">
           <div class="section-head">
-            <h2>Why ToolBazaar</h2>
-            <p>Built for curious teams and fast-moving operators.</p>
+            <h2>Why teams choose ToolBazaar</h2>
+            <p>Built for smart discovery and faster decisions.</p>
           </div>
 
           <div class="feature-grid">
             <div class="feature">
               <strong>Smart filtering</strong>
-              <span>Sort by category, price, use case, and team size.</span>
+              <span>Sort by category, budget, use case, and team size.</span>
             </div>
             <div class="feature">
-              <strong>Curated lists</strong>
-              <span>Handpicked recommendations to reduce research time.</span>
+              <strong>Curated picks</strong>
+              <span>See high-signal recommendations without endless searching.</span>
             </div>
             <div class="feature">
-              <strong>Easy comparison</strong>
-              <span>Review the best options before you subscribe or commit.</span>
+              <strong>Quick comparisons</strong>
+              <span>Compare capabilities, features, and value in seconds.</span>
             </div>
             <div class="feature">
-              <strong>Growth friendly</strong>
-              <span>Built for startups, agencies, marketers, and product teams.</span>
+              <strong>Built for growth</strong>
+              <span>Support startups, agencies, marketers, and product teams.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="compare">
+        <div class="container">
+          <div class="section-head">
+            <h2>Compare tools without the noise</h2>
+            <p>See what matters before you subscribe.</p>
+          </div>
+
+          <div class="compare-grid">
+            <div class="compare-panel">
+              <h3>Top AI tools snapshot</h3>
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Tool</th>
+                    <th>Category</th>
+                    <th>Best for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Midjourney</td>
+                    <td>Design</td>
+                    <td>Visual concepts</td>
+                  </tr>
+                  <tr>
+                    <td>GitHub Copilot</td>
+                    <td>Code</td>
+                    <td>Pair programming</td>
+                  </tr>
+                  <tr>
+                    <td>Frase</td>
+                    <td>SEO</td>
+                    <td>Content strategy</td>
+                  </tr>
+                  <tr>
+                    <td>Claude</td>
+                    <td>Business</td>
+                    <td>Writing & analysis</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="compare-list">
+              <h3>What makes ToolBazaar different</h3>
+              <ul>
+                <li>Search across categories in one clean marketplace.</li>
+                <li>Filter by budget, workflow, and business goals.</li>
+                <li>Spot the best option faster with side-by-side comparisons.</li>
+                <li>Keep your AI stack organized as your team grows.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -619,7 +735,7 @@
         <div class="container">
           <div class="section-head">
             <h2>Simple pricing</h2>
-            <p>Start free and scale when you are ready.</p>
+            <p>Start free and scale when you're ready.</p>
           </div>
 
           <div class="pricing-wrap">
@@ -638,7 +754,7 @@
             <div class="price-card featured">
               <div class="tag">Pro</div>
               <h3>$29</h3>
-              <p>For teams that want deeper discovery and control.</p>
+              <p>For teams that want deeper discovery and clarity.</p>
               <ul>
                 <li>Advanced filtering</li>
                 <li>Priority recommendations</li>
@@ -650,7 +766,7 @@
             <div class="price-card">
               <div class="tag">Enterprise</div>
               <h3>Custom</h3>
-              <p>For organizations with multi-team workflows.</p>
+              <p>For organizations with multi-team needs.</p>
               <ul>
                 <li>Custom dashboards</li>
                 <li>Team management</li>
