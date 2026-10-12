@@ -1,35 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="az">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToolBazaar | Discover 128+ AI Tools</title>
-    <meta name="description" content="ToolBazaar helps teams discover, compare, and choose the best AI tools for marketing, design, coding, research, and growth." />
+    <title>ToolBazaar | 128+ AI Alət Kataloqu</title>
+    <meta name="description" content="ToolBazaar — AI alətlərini kəşf edin, müqayisə edin və işiniz üçün ən uyğun seçimləri tapın." />
     <style>
       :root {
-        --bg: #07111d;
+        --bg: #06111d;
         --bg-2: #0d1a2b;
         --panel: rgba(17, 25, 38, 0.8);
-        --panel-strong: #101c2d;
-        --panel-soft: #172534;
+        --panel-soft: #122133;
         --text: #edf6ff;
-        --muted: #9eb7d1;
+        --muted: #9bb5d1;
         --line: rgba(255,255,255,0.08);
         --primary: #7c9cff;
-        --primary-2: #67e8f9;
-        --accent: #9ef7c5;
-        --accent-2: #f7e77d;
-        --shadow: rgba(0, 0, 0, 0.30);
+        --primary-2: #5eead4;
+        --accent: #a7f3d0;
+        --gold: #f5d76f;
+        --shadow: rgba(0,0,0,0.32);
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-
       body {
         margin: 0;
         font-family: Inter, "Segoe UI", Arial, sans-serif;
         background:
-          radial-gradient(circle at top, rgba(124, 156, 255, 0.18) 0%, rgba(124,156,255,0.04) 10%, transparent 25%),
+          radial-gradient(circle at top, rgba(124,156,255,0.20) 0%, rgba(124,156,255,0.04) 16%, transparent 30%),
           linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%);
         color: var(--text);
         line-height: 1.6;
@@ -48,14 +46,14 @@
         top: 0;
         z-index: 30;
         backdrop-filter: blur(14px);
-        background: rgba(7, 17, 29, 0.72);
+        background: rgba(6, 17, 29, 0.72);
         border-bottom: 1px solid var(--line);
       }
 
       .nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         min-height: 76px;
       }
 
@@ -63,8 +61,8 @@
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        font-weight: 800;
         letter-spacing: 0.06em;
+        font-weight: 800;
       }
 
       .brand-mark {
@@ -94,12 +92,12 @@
       }
 
       .btn {
-        border-radius: 999px;
-        padding: 12px 18px;
-        font-weight: 700;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-weight: 700;
         border: 1px solid var(--line);
         transition: 0.2s ease;
         cursor: pointer;
@@ -120,12 +118,12 @@
       }
 
       .hero {
-        padding: 84px 0 48px;
+        padding: 90px 0 50px;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.12fr 0.88fr;
+        grid-template-columns: 1.1fr 0.9fr;
         gap: 56px;
         align-items: center;
       }
@@ -146,7 +144,7 @@
 
       h1 {
         margin: 18px 0 16px;
-        font-size: clamp(2.9rem, 5vw, 5.15rem);
+        font-size: clamp(2.9rem, 5vw, 5.2rem);
         line-height: 0.95;
         letter-spacing: -0.07em;
       }
@@ -168,7 +166,7 @@
       .stats {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 26px;
       }
 
       .stat strong {
@@ -178,7 +176,6 @@
       }
 
       .stat span {
-        display: block;
         color: var(--muted);
         font-size: 0.94rem;
       }
@@ -187,14 +184,14 @@
         background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
         border: 1px solid var(--line);
         border-radius: 30px;
-        box-shadow: 0 30px 80px var(--shadow);
+        box-shadow: 0 28px 80px var(--shadow);
         padding: 18px;
       }
 
       .dashboard {
-        background: rgba(7, 17, 29, 0.9);
-        border-radius: 22px;
+        background: rgba(7,17,29,0.9);
         border: 1px solid var(--line);
+        border-radius: 22px;
         overflow: hidden;
       }
 
@@ -218,9 +215,7 @@
       .dot.yellow { background: #fdbf40; }
       .dot.green { background: #47d566; }
 
-      .dashboard-body {
-        padding: 20px;
-      }
+      .dashboard-body { padding: 20px; }
 
       .search-pill {
         display: flex;
@@ -233,9 +228,7 @@
         color: var(--muted);
       }
 
-      .search-pill strong {
-        color: var(--text);
-      }
+      .search-pill strong { color: var(--text); }
 
       .mini-grid {
         display: grid;
@@ -268,8 +261,8 @@
 
       .mini-card p {
         margin: 0;
-        font-size: 0.92rem;
         color: var(--muted);
+        font-size: 0.92rem;
       }
 
       section {
@@ -314,23 +307,16 @@
         border-radius: 16px;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, rgba(124,156,255,0.20), rgba(103,232,249,0.18));
+        background: linear-gradient(135deg, rgba(124,156,255,0.20), rgba(94,234,212,0.18));
         font-size: 24px;
         margin-bottom: 18px;
       }
 
-      .card h3 {
-        margin: 0 0 10px;
-        font-size: 1.35rem;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
+      .card h3 { margin: 0 0 10px; font-size: 1.35rem; }
+      .card p { margin: 0; color: var(--muted); }
 
       .feature-band {
-        background: linear-gradient(180deg, rgba(124,156,255,0.08), rgba(12, 21, 31, 0.2));
+        background: linear-gradient(180deg, rgba(124,156,255,0.08), rgba(12,21,31,0.15));
         border-top: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
       }
@@ -348,34 +334,112 @@
         padding: 22px 18px;
       }
 
-      .feature strong {
-        display: block;
-        margin-bottom: 8px;
-      }
+      .feature strong { display: block; margin-bottom: 8px; }
+      .feature span { color: var(--muted); font-size: 0.94rem; }
 
-      .feature span {
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-
-      .compare-grid {
+      .catalog-tools {
         display: grid;
         grid-template-columns: 1.05fr 0.95fr;
         gap: 22px;
       }
 
-      .compare-panel,
-      .compare-list {
+      .tool-filters {
         background: rgba(255,255,255,0.02);
         border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 22px;
+        border-radius: 22px;
+        padding: 18px;
       }
 
-      .compare-panel h3,
-      .compare-list h3 {
-        margin: 0 0 18px;
-        font-size: 1.4rem;
+      .filter-input {
+        width: 100%;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px 14px;
+        color: var(--text);
+        font-size: 1rem;
+        margin-bottom: 14px;
+      }
+
+      .filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 0.8rem;
+      }
+
+      .chip.active {
+        color: #07111d;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        border-color: transparent;
+      }
+
+      .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .tool-item {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+
+      .tool-item.hidden { display: none; }
+
+      .tool-item .meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .tool-item h3 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+
+      .tool-item .badge {
+        border-radius: 999px;
+        background: rgba(124,156,255,0.12);
+        color: var(--primary-2);
+        padding: 5px 9px;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+
+      .tool-item p {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      .tool-item footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .compare-table-block {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 18px;
       }
 
       .compare-table {
@@ -397,20 +461,6 @@
         text-transform: uppercase;
       }
 
-      .compare-table td {
-        color: var(--text);
-      }
-
-      .compare-list ul {
-        margin: 0;
-        padding-left: 18px;
-        color: var(--muted);
-      }
-
-      .compare-list li {
-        margin-bottom: 12px;
-      }
-
       .pricing-wrap {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -425,8 +475,8 @@
       }
 
       .price-card.featured {
-        background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(17, 24, 39, 0.55));
-        border-color: rgba(124,156,255,0.35);
+        background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(17,24,39,0.55));
+        border-color: rgba(124,156,255,0.36);
       }
 
       .tag {
@@ -469,6 +519,32 @@
         color: var(--accent);
       }
 
+      .cta-banner {
+        background: linear-gradient(135deg, rgba(124,156,255,0.18), rgba(94,234,212,0.10));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 30px 26px;
+      }
+
+      .cta-banner-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .cta-banner h3 {
+        margin: 0 0 8px;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        letter-spacing: -0.05em;
+      }
+
+      .cta-banner p {
+        margin: 0;
+        color: var(--muted);
+      }
+
       .footer {
         border-top: 1px solid var(--line);
         padding: 28px 0 60px;
@@ -484,20 +560,20 @@
 
       @media (max-width: 980px) {
         .hero-grid,
-        .compare-grid,
         .cards,
         .feature-grid,
+        .catalog-tools,
         .pricing-wrap {
           grid-template-columns: 1fr;
         }
-
         .nav-links { display: none; }
       }
 
       @media (max-width: 620px) {
         .cta-row { flex-direction: column; }
         .cta-row .btn { width: 100%; }
-        .stats { gap: 16px; }
+        .stats { gap: 18px; }
+        .tool-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -510,15 +586,15 @@
         </a>
 
         <nav class="nav-links" aria-label="Main menu">
-          <a href="#tools">Tools</a>
-          <a href="#features">Features</a>
-          <a href="#compare">Compare</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#tools">Alətlər</a>
+          <a href="#features">Xüsusiyyətlər</a>
+          <a href="#catalog">Kataloq</a>
+          <a href="#pricing">Qiymətlər</a>
         </nav>
 
         <div class="nav-actions">
-          <a class="btn btn-secondary" href="#pricing">Pricing</a>
-          <a class="btn btn-primary" href="#tools">Explore tools</a>
+          <a class="btn btn-secondary" href="#pricing">Qiymətlər</a>
+          <a class="btn btn-primary" href="#catalog">Kataloqa bax</a>
         </div>
       </div>
     </header>
@@ -527,35 +603,36 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">✔ Discover the right AI stack</span>
-            <h1>Find the best AI tools in one place.</h1>
+            <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
+            <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
             <p>
-              ToolBazaar helps teams discover, compare, and adopt AI products faster — from
-              marketing and design to coding, research, and business operations.
+              ToolBazaar komandalar üçün AI alətlərin araşdırılması, müqayisəsi və qəbul edilməsi
+              prosesini asanlaşdırır. Marketinq, dizayn, kodlama, araşdırma və biznes işləri üçün
+              ideal seçimləri bir yerdə görürsünüz.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-primary" href="#tools">Browse 128+ tools</a>
-              <a class="btn btn-secondary" href="#pricing">Get started</a>
+              <a class="btn btn-primary" href="#catalog">128+ alətə bax</a>
+              <a class="btn btn-secondary" href="#pricing">Başlamaq</a>
             </div>
 
             <div class="stats">
               <div class="stat">
                 <strong>128+</strong>
-                <span>AI tools</span>
+                <span>AI alət</span>
               </div>
               <div class="stat">
                 <strong>20+</strong>
-                <span>Categories</span>
+                <span>Kateqoriya</span>
               </div>
               <div class="stat">
                 <strong>24/7</strong>
-                <span>Access</span>
+                <span>İstifadə</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-card" aria-label="AI tools preview">
+          <div class="hero-card" aria-label="AI tool preview">
             <div class="dashboard">
               <div class="window-bar">
                 <span class="dot red"></span>
@@ -566,32 +643,32 @@
               <div class="dashboard-body">
                 <div class="search-pill">
                   <span>🔎</span>
-                  <span><strong>Search:</strong> AI marketing tools</span>
+                  <span><strong>Axtar:</strong> AI marketinq alətləri</span>
                 </div>
 
                 <div class="mini-grid">
                   <div class="mini-card">
-                    <span class="tag">Design</span>
+                    <span class="tag">Dizayn</span>
                     <h3>Midjourney</h3>
-                    <p>Image generation for concepts and brand campaigns.</p>
+                    <p>Brend və kampaniya vizuaları üçün təsvir yaradır.</p>
                   </div>
 
                   <div class="mini-card">
-                    <span class="tag">Code</span>
+                    <span class="tag">Kod</span>
                     <h3>GitHub Copilot</h3>
-                    <p>Developer assistant for faster product delivery.</p>
+                    <p>Yazılım komandaları üçün sürətli inkişaf asistanı.</p>
                   </div>
 
                   <div class="mini-card">
                     <span class="tag">SEO</span>
                     <h3>Frase</h3>
-                    <p>Research and content optimization for growth teams.</p>
+                    <p>Məzmun strateqiyası və axtarış optimizasiyası üçün.</p>
                   </div>
 
                   <div class="mini-card">
-                    <span class="tag">Sales</span>
+                    <span class="tag">Satış</span>
                     <h3>Claude</h3>
-                    <p>AI reasoning and writing for business workflows.</p>
+                    <p>Yazı və analitik işlər üçün AI köməkçisi.</p>
                   </div>
                 </div>
               </div>
@@ -603,45 +680,45 @@
       <section id="tools">
         <div class="container">
           <div class="section-head">
-            <h2>Explore AI categories</h2>
-            <p>Find tools that match the way your team works.</p>
+            <h2>AI kateqoriyalarını kəşf edin</h2>
+            <p>Komandanızın işinə uyğun alətləri seçin.</p>
           </div>
 
           <div class="cards">
             <article class="card">
               <div class="icon">✍️</div>
-              <h3>Writing</h3>
-              <p>Generate content, product copy, campaign ideas, and polished messaging.</p>
+              <h3>Yazı</h3>
+              <p>Mətn, kampaniya ideyaları, məhsul mesajları və reklam variantları yaradın.</p>
             </article>
 
             <article class="card">
               <div class="icon">🎨</div>
-              <h3>Design</h3>
-              <p>Create art direction, landing pages, advertisements, and concept visuals.</p>
+              <h3>Dizayn</h3>
+              <p>Brend vizualları, social media, mockup və reklam konseptləri hazırlayın.</p>
             </article>
 
             <article class="card">
               <div class="icon">💻</div>
-              <h3>Coding</h3>
-              <p>Ship features faster with AI-powered code generation and QA workflows.</p>
+              <h3>Kod</h3>
+              <p>AI ilə kod yazımını sürətləndirərək daha tez məhsul çıxarın.</p>
             </article>
 
             <article class="card">
               <div class="icon">📈</div>
-              <h3>Marketing</h3>
-              <p>Supercharge campaign ideas, SEO, paid media, and content strategy.</p>
+              <h3>Marketinq</h3>
+              <p>SEO, kampaniya strategiyası, paid media və konversiya optimizasiyası üçün.</p>
             </article>
 
             <article class="card">
               <div class="icon">🔍</div>
-              <h3>Research</h3>
-              <p>Analyze trends, summarize findings, and transform raw data into action.</p>
+              <h3>Araşdırma</h3>
+              <p>Trendləri analiz edin, məlumatları özetleyin və qərar qəbul edin.</p>
             </article>
 
             <article class="card">
               <div class="icon">📦</div>
-              <h3>Business</h3>
-              <p>Improve operations, customer support, sales workflows, and team output.</p>
+              <h3>Biznes</h3>
+              <p>Satış, dəstək, proses optimizasiyası və team productivity üçün.</p>
             </article>
           </div>
         </div>
@@ -650,83 +727,158 @@
       <section class="feature-band" id="features">
         <div class="container">
           <div class="section-head">
-            <h2>Why teams choose ToolBazaar</h2>
-            <p>Built for smart discovery and faster decisions.</p>
+            <h2>Niyə ToolBazaar?</h2>
+            <p>Tez qərar vermək və daha ağıllı seçim etmək üçün qurulub.</p>
           </div>
 
           <div class="feature-grid">
             <div class="feature">
-              <strong>Smart filtering</strong>
-              <span>Sort by category, budget, use case, and team size.</span>
+              <strong>Ağıllı filtr</strong>
+              <span>Kateqoriya, büdcə və istifadə vəziyyətinə görə seçin.</span>
             </div>
             <div class="feature">
-              <strong>Curated picks</strong>
-              <span>See high-signal recommendations without endless searching.</span>
+              <strong>Seçilmiş tövsiyələr</strong>
+              <span>Ən vacib seçimləri birbaşa görmək işinizi xeyli yüngülləşdirir.</span>
             </div>
             <div class="feature">
-              <strong>Quick comparisons</strong>
-              <span>Compare capabilities, features, and value in seconds.</span>
+              <strong>Tez müqayisə</strong>
+              <span>Alətləri yan-yana müqayisə edərək daha doğru seçim edin.</span>
             </div>
             <div class="feature">
-              <strong>Built for growth</strong>
-              <span>Support startups, agencies, marketers, and product teams.</span>
+              <strong>Böyüməyə hazır</strong>
+              <span>Startap, agentlik, marketinq və məhsul komandaları üçün uyğun.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="compare">
+      <section id="catalog">
         <div class="container">
           <div class="section-head">
-            <h2>Compare tools without the noise</h2>
-            <p>See what matters before you subscribe.</p>
+            <h2>Alət kataloqu</h2>
+            <p>Axtarış və kateqoriyalarla alətləri tez tapın.</p>
           </div>
 
-          <div class="compare-grid">
-            <div class="compare-panel">
-              <h3>Top AI tools snapshot</h3>
+          <div class="catalog-tools">
+            <div class="tool-filters">
+              <input id="toolSearch" class="filter-input" type="text" placeholder="Alət axtarın..." />
+              <div class="filter-chips">
+                <button class="chip active" data-filter="all">Bütün</button>
+                <button class="chip" data-filter="design">Dizayn</button>
+                <button class="chip" data-filter="code">Kod</button>
+                <button class="chip" data-filter="marketing">Marketinq</button>
+                <button class="chip" data-filter="research">Araşdırma</button>
+                <button class="chip" data-filter="productivity">Produktivlik</button>
+              </div>
+            </div>
+
+            <div class="compare-table-block">
               <table class="compare-table">
                 <thead>
                   <tr>
-                    <th>Tool</th>
-                    <th>Category</th>
-                    <th>Best for</th>
+                    <th>Alət</th>
+                    <th>Kateqoriya</th>
+                    <th>Ən yaxşı</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Midjourney</td>
-                    <td>Design</td>
-                    <td>Visual concepts</td>
+                    <td>Dizayn</td>
+                    <td>Vizual konsept</td>
                   </tr>
                   <tr>
                     <td>GitHub Copilot</td>
-                    <td>Code</td>
-                    <td>Pair programming</td>
+                    <td>Kod</td>
+                    <td>Pair coding</td>
                   </tr>
                   <tr>
-                    <td>Frase</td>
-                    <td>SEO</td>
-                    <td>Content strategy</td>
+                    <td>Notion AI</td>
+                    <td>Produktivlik</td>
+                    <td>Dokument və ideya</td>
                   </tr>
                   <tr>
-                    <td>Claude</td>
-                    <td>Business</td>
-                    <td>Writing & analysis</td>
+                    <td>Perplexity</td>
+                    <td>Araşdırma</td>
+                    <td>Bilgi tapma</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+          </div>
 
-            <div class="compare-list">
-              <h3>What makes ToolBazaar different</h3>
-              <ul>
-                <li>Search across categories in one clean marketplace.</li>
-                <li>Filter by budget, workflow, and business goals.</li>
-                <li>Spot the best option faster with side-by-side comparisons.</li>
-                <li>Keep your AI stack organized as your team grows.</li>
-              </ul>
-            </div>
+          <div class="tool-grid" style="margin-top: 22px;">
+            <article class="tool-item" data-category="design" data-name="midjourney">
+              <div class="meta">
+                <h3>Midjourney</h3>
+                <span class="badge">Dizayn</span>
+              </div>
+              <p>Görselleştirilmiş konseptlər, posterlər və marka vizuaları üçün ideal AI vasitə.</p>
+              <footer>
+                <span>İstifadə: 4.9/5</span>
+                <span>Premium</span>
+              </footer>
+            </article>
+
+            <article class="tool-item" data-category="code" data-name="github-copilot">
+              <div class="meta">
+                <h3>GitHub Copilot</h3>
+                <span class="badge">Kod</span>
+              </div>
+              <p>Yazılım komandaları üçün AI assistan, sürətli kod yazımı və problem həlli.</p>
+              <footer>
+                <span>İstifadə: 4.8/5</span>
+                <span>Abunə</span>
+              </footer>
+            </article>
+
+            <article class="tool-item" data-category="marketing" data-name="frase">
+              <div class="meta">
+                <h3>Frase</h3>
+                <span class="badge">Marketinq</span>
+              </div>
+              <p>SEO, kontent strategiyası və axtarış optimizasiyası üçün məlumatlı AI alət.</p>
+              <footer>
+                <span>İstifadə: 4.7/5</span>
+                <span>Premium</span>
+              </footer>
+            </article>
+
+            <article class="tool-item" data-category="research" data-name="perplexity">
+              <div class="meta">
+                <h3>Perplexity</h3>
+                <span class="badge">Araşdırma</span>
+              </div>
+              <p>Ətraflı və dəqiq cavablar üçün AI axtarış asistanı, məlumatın tez özetlənməsi.</p>
+              <footer>
+                <span>İstifadə: 4.8/5</span>
+                <span>Freemium</span>
+              </footer>
+            </article>
+
+            <article class="tool-item" data-category="productivity" data-name="notion-ai">
+              <div class="meta">
+                <h3>Notion AI</h3>
+                <span class="badge">Produktivlik</span>
+              </div>
+              <p>Dokumentlər, ideyalar, komanda qeydləri və iş axını üçün güclü AI köməkçisi.</p>
+              <footer>
+                <span>İstifadə: 4.6/5</span>
+                <span>Abunə</span>
+              </footer>
+            </article>
+
+            <article class="tool-item" data-category="design" data-name="canva-ai">
+              <div class="meta">
+                <h3>Canva AI</h3>
+                <span class="badge">Dizayn</span>
+              </div>
+              <p>Brend elementləri, təqdimatlar və social media qrafikaları üçün sürətli arayüz.</p>
+              <footer>
+                <span>İstifadə: 4.7/5</span>
+                <span>Freemium</span>
+              </footer>
+            </article>
           </div>
         </div>
       </section>
@@ -734,45 +886,59 @@
       <section id="pricing">
         <div class="container">
           <div class="section-head">
-            <h2>Simple pricing</h2>
-            <p>Start free and scale when you're ready.</p>
+            <h2>Sadə qiymətləndirmə</h2>
+            <p>Başlayın və ehtiyacınız artdıqca böyüyün.</p>
           </div>
 
           <div class="pricing-wrap">
             <div class="price-card">
               <div class="tag">Starter</div>
               <h3>$0</h3>
-              <p>Perfect for exploring the catalog.</p>
+              <p>Platformanı kəşf etmək istəyənlər üçün ideal.</p>
               <ul>
-                <li>Browse all AI tools</li>
-                <li>Basic categories</li>
-                <li>Saved lists</li>
+                <li>Bütün alətləri nəzərdən keçirin</li>
+                <li>Əsas kateqoriyalar</li>
+                <li>Seçilmiş siyahılar</li>
               </ul>
-              <a class="btn btn-secondary" href="#top">Try free</a>
+              <a class="btn btn-secondary" href="#top">Pulsuz sınaq</a>
             </div>
 
             <div class="price-card featured">
               <div class="tag">Pro</div>
               <h3>$29</h3>
-              <p>For teams that want deeper discovery and clarity.</p>
+              <p>Komandalar üçün daha dərin axtarış və müqayisə.</p>
               <ul>
-                <li>Advanced filtering</li>
-                <li>Priority recommendations</li>
-                <li>Comparative reviews</li>
+                <li>Əlavə filtrlər</li>
+                <li>Prioritet tövsiyələr</li>
+                <li>Qarşılaşdırma xüsusiyyətləri</li>
               </ul>
-              <a class="btn btn-primary" href="#top">Start Pro</a>
+              <a class="btn btn-primary" href="#top">Pro başla</a>
             </div>
 
             <div class="price-card">
               <div class="tag">Enterprise</div>
-              <h3>Custom</h3>
-              <p>For organizations with multi-team needs.</p>
+              <h3>Özəl</h3>
+              <p>Çox komandalı iş axınları üçün.</p>
               <ul>
-                <li>Custom dashboards</li>
-                <li>Team management</li>
-                <li>Private recommendations</li>
+                <li>Özəl panel</li>
+                <li>Komanda idarəetməsi</li>
+                <li>Mahiyyətli tövsiyələr</li>
               </ul>
-              <a class="btn btn-secondary" href="#top">Talk to sales</a>
+              <a class="btn btn-secondary" href="#top">Satışla əlaqə</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta-banner">
+            <div class="cta-banner-inner">
+              <div>
+                <h3>Yeni AI alətlərini tapmaq üçün hazırlaşırsınız?</h3>
+                <p>ToolBazaar ile teaminiz üçün ən uyğun AI stack-i tez seçin.</p>
+              </div>
+              <a class="btn btn-primary" href="#top">Başlamaq</a>
             </div>
           </div>
         </div>
@@ -782,8 +948,38 @@
     <footer class="footer" id="about">
       <div class="container footer-inner">
         <div>© 2026 ToolBazaar</div>
-        <div>AI tools marketplace for teams and creators</div>
+        <div>AI alətləri bazarı — komandalar üçün</div>
       </div>
     </footer>
+
+    <script>
+      const searchInput = document.getElementById('toolSearch');
+      const chips = document.querySelectorAll('.chip');
+      const items = document.querySelectorAll('.tool-item');
+      let activeFilter = 'all';
+
+      const applyFilters = () => {
+        const query = (searchInput.value || '').trim().toLowerCase();
+
+        items.forEach(item => {
+          const category = item.dataset.category;
+          const name = item.dataset.name || '';
+          const text = item.textContent.toLowerCase();
+          const matchesCategory = activeFilter === 'all' || category === activeFilter;
+          const matchesQuery = !query || text.includes(query) || name.includes(query);
+          item.classList.toggle('hidden', !(matchesCategory && matchesQuery));
+        });
+      };
+
+      searchInput.addEventListener('input', applyFilters);
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.toggle('active', c === chip));
+          activeFilter = chip.dataset.filter;
+          applyFilters();
+        });
+      });
+    </script>
   </body>
 </html>
