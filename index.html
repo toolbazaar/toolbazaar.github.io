@@ -3,576 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToolBazaar | 128+ AI Alət Kataloqu</title>
+    <title>ToolBazaar | 128 AI Alət Kataloqu</title>
     <meta name="description" content="ToolBazaar — AI alətlərini kəşf edin, müqayisə edin və işiniz üçün ən uyğun seçimləri tapın." />
     <style>
       :root {
         --bg: #06111d;
         --bg-2: #0d1a2b;
         --panel: rgba(17, 25, 38, 0.8);
-        --panel-soft: #122133;
         --text: #edf6ff;
         --muted: #9bb5d1;
         --line: rgba(255,255,255,0.08);
         --primary: #7c9cff;
         --primary-2: #5eead4;
         --accent: #a7f3d0;
-        --gold: #f5d76f;
         --shadow: rgba(0,0,0,0.32);
       }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
         font-family: Inter, "Segoe UI", Arial, sans-serif;
-        background:
-          radial-gradient(circle at top, rgba(124,156,255,0.20) 0%, rgba(124,156,255,0.04) 16%, transparent 30%),
-          linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%);
+        background: radial-gradient(circle at top, rgba(124,156,255,0.22) 0%, rgba(124,156,255,0.04) 16%, transparent 30%), linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%);
         color: var(--text);
         line-height: 1.6;
       }
-
       a { color: inherit; text-decoration: none; }
-      img { max-width: 100%; display: block; }
-
-      .container {
-        width: min(1180px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 30;
-        backdrop-filter: blur(14px);
-        background: rgba(6, 17, 29, 0.72);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 76px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        letter-spacing: 0.06em;
-        font-weight: 800;
-      }
-
-      .brand-mark {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #07111d;
-        display: grid;
-        place-items: center;
-        font-size: 18px;
-        font-weight: 900;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        color: var(--muted);
-        font-size: 0.96rem;
-      }
-
-      .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        padding: 12px 18px;
-        font-weight: 700;
-        border: 1px solid var(--line);
-        transition: 0.2s ease;
-        cursor: pointer;
-      }
-
+      .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+      .site-header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(6,17,29,0.72); border-bottom: 1px solid var(--line); }
+      .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; letter-spacing: 0.06em; font-weight: 800; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 18px; font-weight: 900; }
+      .nav-links { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: 0.96rem; }
+      .nav-actions { display: flex; align-items: center; gap: 14px; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 1px solid var(--line); transition: 0.2s ease; }
       .btn:hover { transform: translateY(-1px); }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        color: #07111d;
-        border-color: transparent;
-        box-shadow: 0 18px 32px rgba(124,156,255,0.28);
-      }
-
-      .btn-secondary {
-        background: rgba(255,255,255,0.02);
-        color: var(--text);
-      }
-
-      .hero {
-        padding: 90px 0 50px;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 56px;
-        align-items: center;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.02);
-        color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.04em;
-        font-weight: 700;
-      }
-
-      h1 {
-        margin: 18px 0 16px;
-        font-size: clamp(2.9rem, 5vw, 5.2rem);
-        line-height: 0.95;
-        letter-spacing: -0.07em;
-      }
-
-      .hero-copy p {
-        margin: 0 0 28px;
-        max-width: 620px;
-        font-size: 1.1rem;
-        color: var(--muted);
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        margin-bottom: 30px;
-      }
-
-      .stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 26px;
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.9rem;
-        letter-spacing: -0.05em;
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-
-      .hero-card {
-        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-        border: 1px solid var(--line);
-        border-radius: 30px;
-        box-shadow: 0 28px 80px var(--shadow);
-        padding: 18px;
-      }
-
-      .dashboard {
-        background: rgba(7,17,29,0.9);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        overflow: hidden;
-      }
-
-      .window-bar {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 16px;
-        border-bottom: 1px solid var(--line);
-        background: rgba(255,255,255,0.02);
-      }
-
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        display: inline-block;
-      }
-
+      .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; border-color: transparent; box-shadow: 0 18px 32px rgba(124,156,255,0.28); }
+      .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); }
+      .hero { padding: 90px 0 50px; }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; font-weight: 700; }
+      h1 { margin: 18px 0 16px; font-size: clamp(2.9rem, 5vw, 5.2rem); line-height: 0.95; letter-spacing: -0.07em; }
+      .hero-copy p { margin: 0 0 28px; max-width: 620px; font-size: 1.1rem; color: var(--muted); }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+      .stats { display: flex; flex-wrap: wrap; gap: 26px; }
+      .stat strong { display: block; font-size: 1.9rem; letter-spacing: -0.05em; }
+      .stat span { color: var(--muted); font-size: 0.94rem; }
+      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 18px; }
+      .dashboard { background: rgba(7,17,29,0.9); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
+      .window-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+      .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
       .dot.red { background: #ff6961; }
       .dot.yellow { background: #fdbf40; }
       .dot.green { background: #47d566; }
-
       .dashboard-body { padding: 20px; }
-
-      .search-pill {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(255,255,255,0.03);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 12px 14px;
-        color: var(--muted);
-      }
-
+      .search-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; color: var(--muted); }
       .search-pill strong { color: var(--text); }
-
-      .mini-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 20px;
-      }
-
-      .mini-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 16px;
-      }
-
-      .mini-card .tag {
-        display: inline-block;
-        margin-bottom: 8px;
-        color: var(--primary-2);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .mini-card h3 {
-        margin: 0 0 8px;
-        font-size: 1.08rem;
-      }
-
-      .mini-card p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      section {
-        padding: 54px 0;
-      }
-
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 18px;
-        margin-bottom: 24px;
-      }
-
-      .section-head h2 {
-        margin: 0;
-        font-size: clamp(2.1rem, 4vw, 3rem);
-        letter-spacing: -0.05em;
-      }
-
-      .section-head p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 24px;
-      }
-
-      .card .icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 16px;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(135deg, rgba(124,156,255,0.20), rgba(94,234,212,0.18));
-        font-size: 24px;
-        margin-bottom: 18px;
-      }
-
-      .card h3 { margin: 0 0 10px; font-size: 1.35rem; }
-      .card p { margin: 0; color: var(--muted); }
-
-      .feature-band {
-        background: linear-gradient(180deg, rgba(124,156,255,0.08), rgba(12,21,31,0.15));
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 20px;
-      }
-
-      .feature {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 22px 18px;
-      }
-
-      .feature strong { display: block; margin-bottom: 8px; }
-      .feature span { color: var(--muted); font-size: 0.94rem; }
-
-      .catalog-tools {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .tool-filters {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 18px;
-      }
-
-      .filter-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .chip {
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.02);
-        color: var(--muted);
-        border-radius: 999px;
-        padding: 8px 12px;
-        cursor: pointer;
-        font-size: 0.8rem;
-      }
-
-      .chip.active {
-        color: #07111d;
-        background: linear-gradient(135deg, var(--primary), var(--primary-2));
-        border-color: transparent;
-      }
-
-      .tool-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .tool-item {
-        display: block;
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px;
-        transition: 0.2s ease;
-        color: var(--text);
-      }
-
-      .tool-item:hover {
-        transform: translateY(-2px);
-        border-color: rgba(124,156,255,0.4);
-        box-shadow: 0 18px 36px rgba(0,0,0,0.16);
-      }
-
-      .tool-item.hidden { display: none; }
-
-      .tool-item .meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 12px;
-      }
-
-      .tool-item h3 {
-        margin: 0;
-        font-size: 1.15rem;
-      }
-
-      .tool-item .badge {
-        border-radius: 999px;
-        background: rgba(124,156,255,0.12);
-        color: var(--primary-2);
-        padding: 5px 9px;
-        font-size: 0.72rem;
-        font-weight: 700;
-      }
-
-      .tool-item p {
-        margin: 0 0 12px;
-        color: var(--muted);
-        font-size: 0.93rem;
-      }
-
-      .tool-item footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .compare-table-block {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 18px;
-      }
-
-      .compare-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .compare-table th,
-      .compare-table td {
-        text-align: left;
-        padding: 12px 10px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .compare-table th {
-        color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .pricing-wrap {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .price-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 22px;
-      }
-
-      .price-card.featured {
-        background: linear-gradient(180deg, rgba(124,156,255,0.12), rgba(17,24,39,0.55));
-        border-color: rgba(124,156,255,0.36);
-      }
-
-      .tag {
-        display: inline-block;
-        font-size: 0.72rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--primary-2);
-        font-weight: 800;
-      }
-
-      .price-card h3 {
-        margin: 14px 0 12px;
-        font-size: clamp(2rem, 4vw, 2.6rem);
-        letter-spacing: -0.05em;
-      }
-
-      .price-card p {
-        margin: 0 0 18px;
-        color: var(--muted);
-      }
-
-      .price-card ul {
-        list-style: none;
-        margin: 0 0 22px;
-        padding: 0;
-        color: var(--muted);
-      }
-
-      .price-card li {
-        position: relative;
-        padding-left: 22px;
-        margin-bottom: 10px;
-      }
-
-      .price-card li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-      }
-
-      .cta-banner {
-        background: linear-gradient(135deg, rgba(124,156,255,0.18), rgba(94,234,212,0.10));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        padding: 30px 26px;
-      }
-
-      .cta-banner-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .cta-banner h3 {
-        margin: 0 0 8px;
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
-        letter-spacing: -0.05em;
-      }
-
-      .cta-banner p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .footer {
-        border-top: 1px solid var(--line);
-        padding: 28px 0 60px;
-        color: var(--muted);
-      }
-
-      .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      @media (max-width: 980px) {
-        .hero-grid,
-        .cards,
-        .feature-grid,
-        .pricing-wrap,
-        .tool-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .nav-links { display: none; }
-      }
-
-      @media (max-width: 620px) {
-        .cta-row { flex-direction: column; }
-        .cta-row .btn { width: 100%; }
-        .stats { gap: 18px; }
-        .tool-grid { grid-template-columns: 1fr; }
-      }
+      .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+      .mini-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+      .mini-card .tag { display: inline-block; margin-bottom: 8px; color: var(--primary-2); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      .mini-card h3 { margin: 0 0 8px; font-size: 1.08rem; }
+      .mini-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+      section { padding: 54px 0; }
+      .section-head { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 24px; }
+      .section-head h2 { margin: 0; font-size: clamp(2.1rem, 4vw, 3rem); letter-spacing: -0.05em; }
+      .section-head p { margin: 0; color: var(--muted); }
+      .catalog-tools { display: grid; grid-template-columns: 1fr; gap: 22px; }
+      .tool-filters { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 22px; padding: 18px; }
+      .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chip { border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); border-radius: 999px; padding: 8px 12px; cursor: pointer; font-size: 0.8rem; }
+      .chip.active { color: #07111d; background: linear-gradient(135deg, var(--primary), var(--primary-2)); border-color: transparent; }
+      .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+      .tool-item { display: block; background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 18px; transition: 0.2s ease; color: var(--text); }
+      .tool-item:hover { transform: translateY(-2px); border-color: rgba(124,156,255,0.4); box-shadow: 0 18px 36px rgba(0,0,0,0.16); }
+      .tool-item .meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+      .tool-item h3 { margin: 0; font-size: 1.1rem; }
+      .tool-item .badge { border-radius: 999px; background: rgba(124,156,255,0.12); color: var(--primary-2); padding: 5px 9px; font-size: 0.72rem; font-weight: 700; }
+      .tool-item p { margin: 0 0 12px; color: var(--muted); font-size: 0.93rem; }
+      .tool-item footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--muted); font-size: 0.8rem; }
+      .footer { border-top: 1px solid var(--line); padding: 28px 0 60px; color: var(--muted); }
+      .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 12px; }
+      @media (max-width: 980px) { .hero-grid, .tool-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
+      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -582,14 +94,11 @@
           <span class="brand-mark">T</span>
           <span>TOOLBAZAAR</span>
         </a>
-
         <nav class="nav-links" aria-label="Main menu">
-          <a href="#tools">Alətlər</a>
-          <a href="#features">Xüsusiyyətlər</a>
           <a href="#catalog">Kataloq</a>
+          <a href="#features">Xüsusiyyətlər</a>
           <a href="#pricing">Qiymətlər</a>
         </nav>
-
         <div class="nav-actions">
           <a class="btn btn-secondary" href="#pricing">Qiymətlər</a>
           <a class="btn btn-primary" href="#catalog">Kataloqa bax</a>
@@ -603,148 +112,29 @@
           <div class="hero-copy">
             <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
             <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
-            <p>
-              ToolBazaar komandalar üçün AI alətlərin araşdırılması, müqayisəsi və qəbul edilməsi
-              prosesini asanlaşdırır. Marketinq, dizayn, kodlama, araşdırma və biznes işləri üçün
-              ideal seçimləri bir yerdə görürsünüz.
-            </p>
-
+            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün ideal variantlar burada toplanır.</p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="#catalog">128+ alətə bax</a>
+              <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
               <a class="btn btn-secondary" href="#pricing">Başlamaq</a>
             </div>
-
             <div class="stats">
-              <div class="stat">
-                <strong>128+</strong>
-                <span>AI alət</span>
-              </div>
-              <div class="stat">
-                <strong>20+</strong>
-                <span>Kateqoriya</span>
-              </div>
-              <div class="stat">
-                <strong>24/7</strong>
-                <span>İstifadə</span>
-              </div>
+              <div class="stat"><strong id="toolCount">128</strong><span>AI alət</span></div>
+              <div class="stat"><strong>8</strong><span>Kateqoriya</span></div>
+              <div class="stat"><strong>24/7</strong><span>İstifadə</span></div>
             </div>
           </div>
-
-          <div class="hero-card" aria-label="AI tool preview">
+          <div class="hero-card" aria-label="AI tool overview">
             <div class="dashboard">
-              <div class="window-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-
+              <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
               <div class="dashboard-body">
-                <div class="search-pill">
-                  <span>🔎</span>
-                  <span><strong>Axtar:</strong> AI marketinq alətləri</span>
-                </div>
-
+                <div class="search-pill"><span>🔎</span><span><strong>Axtar:</strong> AI marketinq alətləri</span></div>
                 <div class="mini-grid">
-                  <div class="mini-card">
-                    <span class="tag">Dizayn</span>
-                    <h3>Midjourney</h3>
-                    <p>Brend və kampaniya vizuaları üçün təsvir yaradır.</p>
-                  </div>
-
-                  <div class="mini-card">
-                    <span class="tag">Kod</span>
-                    <h3>GitHub Copilot</h3>
-                    <p>Yazılım komandaları üçün sürətli inkişaf asistanı.</p>
-                  </div>
-
-                  <div class="mini-card">
-                    <span class="tag">SEO</span>
-                    <h3>Frase</h3>
-                    <p>Məzmun strateqiyası və axtarış optimizasiyası üçün.</p>
-                  </div>
-
-                  <div class="mini-card">
-                    <span class="tag">Satış</span>
-                    <h3>Claude</h3>
-                    <p>Yazı və analitik işlər üçün AI köməkçisi.</p>
-                  </div>
+                  <div class="mini-card"><span class="tag">Dizayn</span><h3>Midjourney</h3><p>Brend vizualları və konseptlər üçün AI.</p></div>
+                  <div class="mini-card"><span class="tag">Kod</span><h3>GitHub Copilot</h3><p>Yazılım komandaları üçün sürətli inkişaf köməkçisi.</p></div>
+                  <div class="mini-card"><span class="tag">SEO</span><h3>Frase</h3><p>Məzmun və axtarış optimizasiyası üçün.</p></div>
+                  <div class="mini-card"><span class="tag">Yazı</span><h3>ChatGPT</h3><p>Yazı, ideya və analitik köməkçi.</p></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="tools">
-        <div class="container">
-          <div class="section-head">
-            <h2>AI kateqoriyalarını kəşf edin</h2>
-            <p>Komandanızın işinə uyğun alətləri seçin.</p>
-          </div>
-
-          <div class="cards">
-            <article class="card">
-              <div class="icon">✍️</div>
-              <h3>Yazı</h3>
-              <p>Mətn, kampaniya ideyaları, məhsul mesajları və reklam variantları yaradın.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">🎨</div>
-              <h3>Dizayn</h3>
-              <p>Brend vizualları, social media, mockup və reklam konseptləri hazırlayın.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">💻</div>
-              <h3>Kod</h3>
-              <p>AI ilə kod yazımını sürətləndirərək daha tez məhsul çıxarın.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">📈</div>
-              <h3>Marketinq</h3>
-              <p>SEO, kampaniya strategiyası, paid media və konversiya optimizasiyası üçün.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">🔍</div>
-              <h3>Araşdırma</h3>
-              <p>Trendləri analiz edin, məlumatları özetleyin və qərar qəbul edin.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon">📦</div>
-              <h3>Biznes</h3>
-              <p>Satış, dəstək, proses optimizasiyası və team productivity üçün.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="feature-band" id="features">
-        <div class="container">
-          <div class="section-head">
-            <h2>Niyə ToolBazaar?</h2>
-            <p>Tez qərar vermək və daha ağıllı seçim etmək üçün qurulub.</p>
-          </div>
-
-          <div class="feature-grid">
-            <div class="feature">
-              <strong>Ağıllı filtr</strong>
-              <span>Kateqoriya, büdcə və istifadə vəziyyətinə görə seçin.</span>
-            </div>
-            <div class="feature">
-              <strong>Seçilmiş tövsiyələr</strong>
-              <span>Ən vacib seçimləri birbaşa görmək işinizi xeyli yüngülləşdirir.</span>
-            </div>
-            <div class="feature">
-              <strong>Tez müqayisə</strong>
-              <span>Alətləri yan-yana müqayisə edərək daha doğru seçim edin.</span>
-            </div>
-            <div class="feature">
-              <strong>Böyüməyə hazır</strong>
-              <span>Startap, agentlik, marketinq və məhsul komandaları üçün uyğun.</span>
             </div>
           </div>
         </div>
@@ -756,96 +146,204 @@
             <h2>128 AI alət kataloqu</h2>
             <p>Buradakı alətləri klikləyib orijinal sayta keçin.</p>
           </div>
-
           <div class="catalog-tools">
             <div class="tool-filters">
               <div class="filter-chips">
                 <button class="chip active" data-filter="all">Bütün</button>
-                <button class="chip" data-filter="yazı">Yazı</button>
-                <button class="chip" data-filter="dizayn">Dizayn</button>
-                <button class="chip" data-filter="kod">Kod</button>
-                <button class="chip" data-filter="marketinq">Marketinq</button>
-                <button class="chip" data-filter="araşdırma">Araşdırma</button>
-                <button class="chip" data-filter="produktivlik">Produktivlik</button>
-                <button class="chip" data-filter="video">Video</button>
-                <button class="chip" data-filter="satış">Satış</button>
+                <button class="chip" data-filter="Yazı">Yazı</button>
+                <button class="chip" data-filter="Dizayn">Dizayn</button>
+                <button class="chip" data-filter="Kod">Kod</button>
+                <button class="chip" data-filter="Marketinq">Marketinq</button>
+                <button class="chip" data-filter="Araşdırma">Araşdırma</button>
+                <button class="chip" data-filter="Produktivlik">Produktivlik</button>
+                <button class="chip" data-filter="Video">Video</button>
+                <button class="chip" data-filter="Satış">Satış</button>
               </div>
             </div>
           </div>
-
-          <div id="toolGrid" class="tool-grid" style="margin-top: 22px;"></div>
+          <div id="toolGrid" class="tool-grid"></div>
         </div>
       </section>
 
       <section id="pricing">
         <div class="container">
-          <div class="section-head">
-            <h2>Sadə qiymətləndirmə</h2>
-            <p>Başlayın və ehtiyacınız artdıqca böyüyün.</p>
-          </div>
-
-          <div class="pricing-wrap">
-            <div class="price-card">
-              <div class="tag">Starter</div>
-              <h3>$0</h3>
-              <p>Platformanı kəşf etmək istəyənlər üçün ideal.</p>
-              <ul>
-                <li>Bütün alətləri nəzərdən keçirin</li>
-                <li>Əsas kateqoriyalar</li>
-                <li>Seçilmiş siyahılar</li>
-              </ul>
-              <a class="btn btn-secondary" href="#top">Pulsuz sınaq</a>
-            </div>
-
-            <div class="price-card featured">
-              <div class="tag">Pro</div>
-              <h3>$29</h3>
-              <p>Komandalar üçün daha dərin axtarış və müqayisə.</p>
-              <ul>
-                <li>Əlavə filtrlər</li>
-                <li>Prioritet tövsiyələr</li>
-                <li>Qarşılaşdırma xüsusiyyətləri</li>
-              </ul>
-              <a class="btn btn-primary" href="#top">Pro başla</a>
-            </div>
-
-            <div class="price-card">
-              <div class="tag">Enterprise</div>
-              <h3>Özəl</h3>
-              <p>Çox komandalı iş axınları üçün.</p>
-              <ul>
-                <li>Özəl panel</li>
-                <li>Komanda idarəetməsi</li>
-                <li>Mahiyyətli tövsiyələr</li>
-              </ul>
-              <a class="btn btn-secondary" href="#top">Satışla əlaqə</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <div class="cta-banner">
-            <div class="cta-banner-inner">
-              <div>
-                <h3>Yeni AI alətlərini tapmaq üçün hazırlaşırsınız?</h3>
-                <p>ToolBazaar ilə teaminiz üçün ən uyğun AI stack-i tez seçin.</p>
-              </div>
-              <a class="btn btn-primary" href="#top">Başlamaq</a>
-            </div>
+          <div class="section-head"><h2>Sadə qiymətləndirmə</h2><p>Başlayın, böyüyün və ehtiyacınız artdıqca genişlədin.</p></div>
+          <div class="tool-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Starter</h3><span class="badge">$0</span></div>
+              <p>İlk baxış və baza axtarış üçün ideal.</p>
+              <footer><span>Əsas</span><span>✅</span></footer>
+            </article>
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Pro</h3><span class="badge">$29</span></div>
+              <p>Komandalar üçün dərin filtr, müqayisə və prioritet tövsiyə.</p>
+              <footer><span>İstifadə</span><span>✅</span></footer>
+            </article>
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Enterprise</h3><span class="badge">Özəl</span></div>
+              <p>Çoxlu komanda, xüsusi panel və həllər.</p>
+              <footer><span>Business</span><span>✅</span></footer>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer" id="about">
+    <footer class="footer">
       <div class="container footer-inner">
         <div>© 2026 ToolBazaar</div>
-        <div class="footer-links"><a href="/">Home</a><a href="/privacy-policy-en.html">Privacy (EN)</a><a href="/privacy-policy-az.html">Məxfilik (AZ)</a><a href="/privacy-policy-ru.html">Политика (RU)</a><a href="/privacy-policy-tr.html">Gizlilik (TR)</a></div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy-policy-en.html">Privacy Policy</a>
+        </div>
       </div>
     </footer>
 
-    <script>/* existing scripts unchanged */</script>
+    <script>
+      const tools = [
+        { name: 'ChatGPT', category: 'Yazı', price: 'Freemium', description: 'Mətn, ideya və analitik cavablar üçün geniş AI asistanı.', url: 'https://chat.openai.com/' },
+        { name: 'Claude', category: 'Yazı', price: 'Freemium', description: 'Uzun mətn, sənəd və analitik işlər üçün güclü AI.', url: 'https://claude.ai/' },
+        { name: 'Gemini', category: 'Yazı', price: 'Freemium', description: 'Google-aidli yazı, axtarış və multimodal AI.', url: 'https://gemini.google.com/' },
+        { name: 'Perplexity', category: 'Araşdırma', price: 'Freemium', description: 'Mənbə əsaslı axtarış və cavablar.', url: 'https://www.perplexity.ai/' },
+        { name: 'GitHub Copilot', category: 'Kod', price: 'Abunə', description: 'Kod yazımı və tövsiyə asistanı.', url: 'https://github.com/features/copilot' },
+        { name: 'Cursor', category: 'Kod', price: 'Freemium', description: 'Kod editoru üzərində AI inkişaf asistanı.', url: 'https://cursor.com/' },
+        { name: 'Codeium', category: 'Kod', price: 'Freemium', description: 'Kod autocompletion və AI dəstəyi.', url: 'https://codeium.com/' },
+        { name: 'Tabnine', category: 'Kod', price: 'Freemium', description: 'Kod yazımı üçün AI tamamlayıcısı.', url: 'https://www.tabnine.com/' },
+        { name: 'Replit AI', category: 'Kod', price: 'Freemium', description: 'Browser əsaslı kod yazımı və test.', url: 'https://replit.com/ai' },
+        { name: 'Amazon CodeWhisperer', category: 'Kod', price: 'Freemium', description: 'AWS-də AI kod köməkçisi.', url: 'https://aws.amazon.com/codewhisperer/' },
+        { name: 'Sourcegraph Cody', category: 'Kod', price: 'Freemium', description: 'Kod bazasında AI axtarış və dəstək.', url: 'https://sourcegraph.com/cody' },
+        { name: 'OpenHands', category: 'Kod', price: 'Açıq', description: 'Açıq mənbəli developer AI asistanı.', url: 'https://github.com/All-Hands-AI/OpenHands' },
+        { name: 'Aider', category: 'Kod', price: 'Açıq', description: 'AI ilə kod yazımı və refactoring.', url: 'https://aider.chat/' },
+        { name: 'Continue', category: 'Kod', price: 'Açıq', description: 'Editor daxilində AI assistan.', url: 'https://continue.dev/' },
+        { name: 'Cline', category: 'Kod', price: 'Freemium', description: 'Terminal və tətbiq daxilində AI dəstəyi.', url: 'https://cline.bot/' },
+        { name: 'CodeRabbit', category: 'Kod', price: 'Freemium', description: 'PR və kod review üçün AI.', url: 'https://www.coderabbit.ai/' },
+        { name: 'Blackbox AI', category: 'Kod', price: 'Freemium', description: 'Kod tapma və yazma asistanı.', url: 'https://www.blackbox.ai/' },
+        { name: 'Debuild', category: 'Kod', price: 'Freemium', description: 'Mikroservislər üçün AI inkişaf dəstəyi.', url: 'https://debuild.com/' },
+        { name: 'Midjourney', category: 'Dizayn', price: 'Abunə', description: 'Gözəl konsept və vizual yaradıcı AI.', url: 'https://www.midjourney.com/' },
+        { name: 'DALL·E 3', category: 'Dizayn', price: 'Freemium', description: 'Mətnə əsaslanan vizual yaradıcı model.', url: 'https://openai.com/dall-e-3' },
+        { name: 'Stable Diffusion', category: 'Dizayn', price: 'Freemium', description: 'Açıq model ilə şəkil və vizual yaradıcılığı.', url: 'https://stability.ai/' },
+        { name: 'Adobe Firefly', category: 'Dizayn', price: 'Abunə', description: 'Adobe məhsullarında AI yaradıcı tool.', url: 'https://firefly.adobe.com/' },
+        { name: 'Leonardo AI', category: 'Dizayn', price: 'Freemium', description: 'İllüstrasiya və konsept vizual AI.', url: 'https://leonardo.ai/' },
+        { name: 'Ideogram', category: 'Dizayn', price: 'Freemium', description: 'Logo və metin əsaslı vizual yaradıcılığı.', url: 'https://ideogram.ai/' },
+        { name: 'Canva AI', category: 'Dizayn', price: 'Freemium', description: 'Dizayn, banner və social media materialı.', url: 'https://www.canva.com/ai-image-generator/' },
+        { name: 'Playground AI', category: 'Dizayn', price: 'Freemium', description: 'Stil və vizual konseptlər üçün AI.', url: 'https://playground.com/' },
+        { name: 'NightCafe', category: 'Dizayn', price: 'Freemium', description: 'Poster və illüstrasiya üçün AI.', url: 'https://creator.nightcafe.studio/' },
+        { name: 'Photoroom', category: 'Dizayn', price: 'Freemium', description: 'Fotolarda arxa plan və məhsul təmizlənməsi.', url: 'https://www.photoroom.com/' },
+        { name: 'Remove.bg', category: 'Dizayn', price: 'Freemium', description: 'Şəkildən fonu avtomatik silən AI.', url: 'https://www.remove.bg/' },
+        { name: 'Clipdrop', category: 'Dizayn', price: 'Freemium', description: 'Şəkil redaktə və qrafik alətləri.', url: 'https://clipdrop.co/' },
+        { name: 'Deep Dream Generator', category: 'Dizayn', price: 'Freemium', description: 'Vizual effektlər və konseptlər.', url: 'https://deepdreamgenerator.com/' },
+        { name: 'Runway', category: 'Video', price: 'Freemium', description: 'AI video yaradılması və redaktəsi.', url: 'https://runwayml.com/' },
+        { name: 'Pika', category: 'Video', price: 'Freemium', description: 'Video və animasiya yaradıcı AI.', url: 'https://pika.art/' },
+        { name: 'HeyGen', category: 'Video', price: 'Freemium', description: 'Avatar və AI video presenterlər.', url: 'https://www.heygen.com/' },
+        { name: 'Synthesia', category: 'Video', price: 'Abunə', description: 'AI avatar ilə video hazırlayıcısı.', url: 'https://www.synthesia.io/' },
+        { name: 'Descript', category: 'Video', price: 'Freemium', description: 'Video redaktə və səs təmizləmə.', url: 'https://www.descript.com/' },
+        { name: 'Veed', category: 'Video', price: 'Freemium', description: 'Video redaktə və subtitle asistanı.', url: 'https://www.veed.io/' },
+        { name: 'OpusClip', category: 'Video', price: 'Freemium', description: 'Uzun videoları qısa kliplərə çevirir.', url: 'https://www.opus.pro/' },
+        { name: 'Captions', category: 'Video', price: 'Freemium', description: 'AI ilə video dublyaj və alt yazı.', url: 'https://www.captions.ai/' },
+        { name: 'ElevenLabs', category: 'Video', price: 'Freemium', description: 'Səs və tələffüz üçün AI motoru.', url: 'https://elevenlabs.io/' },
+        { name: 'Murf', category: 'Video', price: 'Freemium', description: 'Səs və podcast üçün AI tələffüz.', url: 'https://murf.ai/' },
+        { name: 'Adobe Podcast', category: 'Video', price: 'Freemium', description: 'Audio təmizləmə və transkripsiya.', url: 'https://podcast.adobe.com/' },
+        { name: 'Krisp', category: 'Video', price: 'Freemium', description: 'Zənglərdə səs təmizləyici AI.', url: 'https://krisp.ai/' },
+        { name: 'Fireflies.ai', category: 'Produktivlik', price: 'Freemium', description: 'Görüş təqdimatı və transkript AI.', url: 'https://fireflies.ai/' },
+        { name: 'Otter.ai', category: 'Produktivlik', price: 'Freemium', description: 'Görüş və zəng transkriptləri.', url: 'https://otter.ai/' },
+        { name: 'Notion AI', category: 'Produktivlik', price: 'Freemium', description: 'Notion daxilində yazı və planlama asistanı.', url: 'https://www.notion.so/product/ai' },
+        { name: 'ClickUp AI', category: 'Produktivlik', price: 'Freemium', description: 'Tapşırıq və iş axını AI asistanı.', url: 'https://clickup.com/ai' },
+        { name: 'Asana AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda planlaması və əməliyyat AI.', url: 'https://asana.com/product/ai' },
+        { name: 'Trello AI', category: 'Produktivlik', price: 'Freemium', description: 'İş lövhəsi və prioritetizasiya.', url: 'https://trello.com/' },
+        { name: 'Slack AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda yazışmalarında AI özet.', url: 'https://slack.com/' },
+        { name: 'Zapier AI', category: 'Produktivlik', price: 'Freemium', description: 'İş axını avtomatlaşdırması.', url: 'https://zapier.com/ai' },
+        { name: 'Airtable AI', category: 'Produktivlik', price: 'Freemium', description: 'CRM və məhsul məlumatlarının AI asistanı.', url: 'https://airtable.com/' },
+        { name: 'Monday AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda xoşagəlməz iş axını AI.', url: 'https://monday.com/' },
+        { name: 'Motion', category: 'Produktivlik', price: 'Abunə', description: 'Vaxt planlaması və fəaliyyət optimizasiyası.', url: 'https://www.usemotion.com/' },
+        { name: 'Todoist AI', category: 'Produktivlik', price: 'Freemium', description: 'Tapşırıq prioritizasiya və planlama.', url: 'https://todoist.com/' },
+        { name: 'Evernote AI', category: 'Produktivlik', price: 'Freemium', description: 'Not və fikir asistanı.', url: 'https://evernote.com/' },
+        { name: 'Miro AI', category: 'Produktivlik', price: 'Freemium', description: 'Board və brainstorming AI.', url: 'https://miro.com/ai/' },
+        { name: 'Loom AI', category: 'Produktivlik', price: 'Freemium', description: 'Video qeyd və özet asistanı.', url: 'https://www.loom.com/' },
+        { name: 'Zettlr', category: 'Produktivlik', price: 'Freemium', description: 'Mətn və araşdırma idarəetmə aləti.', url: 'https://www.zettlr.com/' },
+        { name: 'Jasper', category: 'Marketinq', price: 'Abunə', description: 'Kampaniya və SEO AI yazı asistanı.', url: 'https://www.jasper.ai/' },
+        { name: 'Copy.ai', category: 'Marketinq', price: 'Freemium', description: 'Reklam və sosial media mətnlər.', url: 'https://www.copy.ai/' },
+        { name: 'Writesonic', category: 'Marketinq', price: 'Freemium', description: 'SEO və satış məzmunu üçün AI.', url: 'https://writesonic.com/' },
+        { name: 'Frase', category: 'Marketinq', price: 'Abunə', description: 'SEO, araşdırma və məzmun optimizasiyası.', url: 'https://www.frase.io/' },
+        { name: 'Surfer SEO', category: 'Marketinq', price: 'Abunə', description: 'Məzmun üçün SEO optimizasiyası.', url: 'https://surferseo.com/' },
+        { name: 'MarketMuse', category: 'Marketinq', price: 'Abunə', description: 'Məzmun strategiyası və SEO AI.', url: 'https://www.marketmuse.com/' },
+        { name: 'Outranking', category: 'Marketinq', price: 'Abunə', description: 'Məzmun planlaması və AI optimizasiya.', url: 'https://www.outranking.io/' },
+        { name: 'GrowthBar', category: 'Marketinq', price: 'Abunə', description: 'SEO analitikləri və AI məzmun.', url: 'https://growthbarseo.com/' },
+        { name: 'Semrush Copilot', category: 'Marketinq', price: 'Abunə', description: 'SEO və marketinq üçün AI köməkçi.', url: 'https://www.semrush.com/' },
+        { name: 'AdCreative.ai', category: 'Marketinq', price: 'Abunə', description: 'Reklam bannerləri və kreativləri.', url: 'https://adcreative.ai/' },
+        { name: 'Phrasee', category: 'Marketinq', price: 'Abunə', description: 'E-poçt və reklam mesajları üçün AI.', url: 'https://phrasee.co/' },
+        { name: 'Omnisend AI', category: 'Marketinq', price: 'Freemium', description: 'E-poçt marketinqi üçün AI avtomatlaşdırma.', url: 'https://www.omnisend.com/' },
+        { name: 'Persado', category: 'Marketinq', price: 'Abunə', description: 'Kreativ mesajlar və konversiya AI.', url: 'https://www.persado.com/' },
+        { name: 'HubSpot AI', category: 'Satış', price: 'Freemium', description: 'CRM və satış prosesləri üçün AI.', url: 'https://www.hubspot.com/products/sales' },
+        { name: 'Intercom Fin', category: 'Satış', price: 'Abunə', description: 'Müştəri dəstəyi chatbot AI.', url: 'https://www.intercom.com/ai' },
+        { name: 'Zendesk AI', category: 'Satış', price: 'Abunə', description: 'Dəstək və yardım prosesləri üçün AI.', url: 'https://www.zendesk.com/' },
+        { name: 'Drift', category: 'Satış', price: 'Abunə', description: 'Satış chatbot və pipeline avtomatlaşdırması.', url: 'https://www.drift.com/' },
+        { name: 'Salesforce Einstein', category: 'Satış', price: 'Abunə', description: 'CRM və satış analitikləri üçün AI.', url: 'https://www.salesforce.com/products/einstein/' },
+        { name: 'Freshdesk AI', category: 'Satış', price: 'Abunə', description: 'Müştəri dəstək sorğuları üçün AI.', url: 'https://www.freshworks.com/freshdesk/' },
+        { name: 'Kustomer AI', category: 'Satış', price: 'Abunə', description: 'Müştəri xidmətləri və satış AI.', url: 'https://www.kustomer.com/' },
+        { name: 'Gong', category: 'Satış', price: 'Abunə', description: 'Satış görüşləri və analitika AI.', url: 'https://www.gong.io/' },
+        { name: 'Lavender', category: 'Satış', price: 'Freemium', description: 'E-poçt yazımını optimizasiya edən AI.', url: 'https://www.lavender.ai/' },
+        { name: 'Apollo.io AI', category: 'Satış', price: 'Freemium', description: 'Lead tapma və outreach AI.', url: 'https://apollo.io/' },
+        { name: 'Outreach AI', category: 'Satış', price: 'Abunə', description: 'Outreach və pipeline AI.', url: 'https://www.outreach.io/' },
+        { name: 'Elicit', category: 'Araşdırma', price: 'Freemium', description: 'Elmi və akademik araşdırma üçün AI.', url: 'https://elicit.com/' },
+        { name: 'Consensus', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalələrə əsaslanan AI cavablar.', url: 'https://consensus.app/' },
+        { name: 'Scite', category: 'Araşdırma', price: 'Freemium', description: 'Məqalə dəyər və sitat analitikləri.', url: 'https://scite.ai/' },
+        { name: 'NotebookLM', category: 'Araşdırma', price: 'Freemium', description: 'Məzmun bazasında öyrənmə AI.', url: 'https://notebooklm.google.com/' },
+        { name: 'Semantic Scholar', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalə və məlumat axtarışı.', url: 'https://www.semanticscholar.org/' },
+        { name: 'ResearchRabbit', category: 'Araşdırma', price: 'Freemium', description: 'Məqalələr və əlaqəli tədqiqatlar.', url: 'https://www.researchrabbit.ai/' },
+        { name: 'Connected Papers', category: 'Araşdırma', price: 'Freemium', description: 'Məqalələr arasında əlaqə quran AI.', url: 'https://www.connectedpapers.com/' },
+        { name: 'OpenAlex', category: 'Araşdırma', price: 'Freemium', description: 'Açıq bibliometrik axtarış platforması.', url: 'https://openalex.org/' },
+        { name: 'Explainpaper', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalələri sadələşdirən AI.', url: 'https://www.explainpaper.com/' },
+        { name: 'Unriddle', category: 'Araşdırma', price: 'Freemium', description: 'Mətn və sənəd axtarışı üçün AI.', url: 'https://www.unriddle.ai/' },
+        { name: 'Paperpal', category: 'Araşdırma', price: 'Abunə', description: 'Akademik yazı və məqalə dəstəyi.', url: 'https://www.paperpal.com/' },
+        { name: 'Gensim', category: 'Araşdırma', price: 'Açıq', description: 'Metod və NLP üçün AI/ML alətləri.', url: 'https://radimrehurek.com/gensim/' },
+        { name: 'DeepResearch', category: 'Araşdırma', price: 'Freemium', description: 'Dərin informasiyalı araşdırma AI.', url: 'https://deepresearch.com/' },
+        { name: 'Chatsonic', category: 'Yazı', price: 'Freemium', description: 'Yazı və SEO məqsədli AI köməkçisi.', url: 'https://writesonic.com/chat' },
+        { name: 'Rytr', category: 'Yazı', price: 'Freemium', description: 'Blog, e-poçt və reklam mətnləri.', url: 'https://rytr.me/' },
+        { name: 'GrammarlyGO', category: 'Yazı', price: 'Freemium', description: 'Yazı və stil tərtibatı üçün AI.', url: 'https://www.grammarly.com/ai-writing' },
+        { name: 'Wordtune', category: 'Yazı', price: 'Freemium', description: 'Mətnin ifadəsi və üslubunu düzəldir.', url: 'https://www.wordtune.com/' },
+        { name: 'QuillBot', category: 'Yazı', price: 'Freemium', description: 'Parafoz və mətn sadələşdirilməsi.', url: 'https://quillbot.com/' },
+        { name: 'Hemingway AI', category: 'Yazı', price: 'Freemium', description: 'Mətnin anlaşılırlığını artırır.', url: 'https://hemingwayapp.com/' },
+        { name: 'Sudowrite', category: 'Yazı', price: 'Abunə', description: 'Roman və hekayə yaratmaq üçün AI.', url: 'https://www.sudowrite.com/' },
+        { name: 'NovelAI', category: 'Yazı', price: 'Abunə', description: 'Yazı və hikayət yaradıcı AI.', url: 'https://novelai.net/' },
+        { name: 'Anyword', category: 'Marketinq', price: 'Abunə', description: 'Reklam və konversiya optimizasiyası.', url: 'https://anyword.com/' },
+        { name: 'StoryChief', category: 'Marketinq', price: 'Abunə', description: 'Məzmun və marketing workflow AI.', url: 'https://storychief.com/' },
+        { name: 'CoSchedule AI', category: 'Marketinq', price: 'Abunə', description: 'Planlama və content optimization.', url: 'https://coschedule.com/' },
+        { name: 'Tinywow', category: 'Produktivlik', price: 'Freemium', description: 'Text və dokument işləmə alətləri.', url: 'https://tinywow.com/' },
+        { name: 'Poe', category: 'Yazı', price: 'Freemium', description: 'Bir neçə modelə birbaşa çıxış.', url: 'https://poe.com/' }
+      ];
+
+      const toolGrid = document.getElementById('toolGrid');
+      const chips = document.querySelectorAll('.chip');
+      let activeFilter = 'all';
+      const totalCount = tools.length;
+      document.getElementById('toolCount').textContent = totalCount;
+
+      function renderTools() {
+        const filtered = tools.filter(tool => activeFilter === 'all' || tool.category === activeFilter);
+        toolGrid.innerHTML = filtered.map(tool => `
+          <a class="tool-item" href="${tool.url}" target="_blank" rel="noopener noreferrer">
+            <div class="meta">
+              <h3>${tool.name}</h3>
+              <span class="badge">${tool.category}</span>
+            </div>
+            <p>${tool.description}</p>
+            <footer>
+              <span>${tool.price}</span>
+              <span>${tool.category}</span>
+            </footer>
+          </a>
+        `).join('');
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.toggle('active', c === chip));
+          activeFilter = chip.dataset.filter;
+          renderTools();
+        });
+      });
+
+      renderTools();
+    </script>
   </body>
 </html>
