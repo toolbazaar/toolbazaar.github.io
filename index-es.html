@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolBazaar | Catálogo de Herramientas de IA</title>
+  <style>
+    :root { --bg:#06111d; --text:#edf6ff; --muted:#9bb5d1; --line:rgba(255,255,255,0.08); --primary:#7c9cff; --primary-2:#5eead4; --shadow:rgba(0,0,0,0.32); }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at top, rgba(124,156,255,0.22) 0%, rgba(124,156,255,0.04) 16%, transparent 30%), linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%); color:var(--text); line-height:1.6;} a{text-decoration:none;color:inherit} .container{width:min(1180px, calc(100% - 32px)); margin:0 auto} .site-header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(6,17,29,0.72);border-bottom:1px solid var(--line)} .nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:18px} .brand{display:inline-flex;align-items:center;gap:12px;letter-spacing:.06em;font-weight:800} .brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#07111d;display:grid;place-items:center;font-size:18px;font-weight:900} .nav-links,.lang-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap} .nav-links a,.lang-links a{color:var(--muted)} .lang-links a{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,0.02)} .hero{padding:72px 0 42px} .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:center} .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);font-size:.8rem;font-weight:700} h1{margin:18px 0 14px;font-size:clamp(2.6rem, 5vw, 4.8rem);line-height:0.95;letter-spacing:-0.07em} p{color:var(--muted)} .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0} .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;font-weight:700;border:1px solid var(--line)} .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#07111d;border-color:transparent;box-shadow:0 18px 32px rgba(124,156,255,0.28)} .btn-secondary{background:rgba(255,255,255,0.02);color:var(--text)} .stats{display:flex;flex-wrap:wrap;gap:24px} .stat strong{display:block;font-size:1.9rem;letter-spacing:-0.05em} .card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 28px 80px var(--shadow)} .tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px} .tool-item{display:block;background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:18px;padding:18px;transition:0.2s ease} .tool-item:hover{transform:translateY(-2px);border-color:rgba(124,156,255,0.4)} .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px} .badge{padding:5px 9px;border-radius:999px;background:rgba(124,156,255,0.12);color:var(--primary-2);font-size:0.72rem;font-weight:700} footer{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted);font-size:0.8rem} .courses-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px} .course-card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:18px;padding:20px} .course-card .level{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(94,234,212,0.12);color:var(--primary-2);font-size:.72rem;font-weight:700;margin-bottom:12px} .course-card h3{margin:0 0 10px} .course-card p{margin:0 0 14px;color:var(--muted)} .course-card .price{color:var(--text);font-weight:700} .footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted)} .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap} .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0} .chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);cursor:pointer} .chip.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#07111d;border-color:transparent} .additional-tools{padding:54px 0;background:rgba(255,255,255,0.01)} .additional-tools h2{margin:0 0 26px;font-size:clamp(2rem,4vw,2.7rem);letter-spacing:-0.05em;text-align:center} .additional-tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px} .additional-tool-card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,0.03);transition:0.2s ease} .additional-tool-card:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,0,0,0.08)} .additional-tool-card h3{margin:0 0 12px;font-size:1.08rem} .additional-tool-card p{margin:0;color:var(--muted);line-height:1.6;font-size:0.95rem} @media (max-width: 640px){.nav{flex-wrap:wrap}.hero-grid,.tool-grid,.courses-grid{grid-template-columns:1fr}.nav-links{width:100%;justify-content:center}}</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/index-es.html" class="brand"><span class="brand-mark">T</span><span>TOOLBAZAAR</span></a>
+      <nav class="nav-links" aria-label="Menú principal">
+        <a href="#catalog">Catálogo</a>
+        <a href="#courses">Cursos de inglés</a>
+        <a href="#pricing">Precios</a>
+        <a href="/privacy-policy-es.html">Política de privacidad</a>
+      </nav>
+      <div class="lang-links">
+        <a href="/index-en.html">EN</a>
+        <a href="/index.html">AZ</a>
+        <a href="/index-ru.html">RU</a>
+        <a href="/index-tr.html">TR</a>
+        <a href="/index-es.html">ES</a>
+        <a href="/index-zh.html">ZH</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">✔ Elige las herramientas de IA adecuadas</span>
+          <h1>Encuentra las mejores herramientas de IA para tu trabajo.</h1>
+          <p>ToolBazaar ayuda a equipos y profesionales a descubrir, comparar y elegir las mejores herramientas de IA para marketing, diseño, programación, investigación y operaciones empresariales.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#catalog">Ver 128 herramientas</a>
+            <a class="btn btn-secondary" href="#courses">Cursos de inglés</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>128</strong><span>Herramientas</span></div>
+            <div class="stat"><strong>9</strong><span>Categorías</span></div>
+            <div class="stat"><strong>24/7</strong><span>Acceso</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Herramientas destacadas</h3>
+          <div class="tool-grid">
+            <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Escritura</span></div><p>Asistente de IA para contenido e ideas.</p><footer><span>Freemium</span><span>IA</span></footer></a>
+            <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Escritura</span></div><p>Soporte para textos largos y análisis.</p><footer><span>Freemium</span><span>IA</span></footer></a>
+            <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>Copilot</h3><span class="badge">Código</span></div><p>Generación y asistencia de código.</p><footer><span>Suscripción</span><span>IA</span></footer></a>
+            <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Diseño</span></div><p>Generación creativa de imágenes.</p><footer><span>Suscripción</span><span>IA</span></footer></a>
+            <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Investigación</span></div><p>Búsqueda basada en fuentes y respuestas.</p><footer><span>Freemium</span><span>IA</span></footer></a>
+            <a class="tool-item" href="https://suno.com/" target="_blank"><div class="meta"><h3>Suno</h3><span class="badge">Música</span></div><p>Generación de música desde texto.</p><footer><span>Freemium</span><span>IA</span></footer></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <div class="container">
+        <h2>Cursos de inglés</h2>
+        <div class="courses-grid">
+          <article class="course-card"><span class="level">Principiante</span><h3>Inglés básico</h3><p>Desarrolla confianza con frases diarias, gramática y vocabulario.</p><div class="price">$120 / mes</div></article>
+          <article class="course-card"><span class="level">Intermedio</span><h3>Inglés intermedio</h3><p>Mejora lectura, escucha, escritura y conversación natural.</p><div class="price">$180 / mes</div></article>
+          <article class="course-card"><span class="level">Negocios</span><h3>Inglés para negocios</h3><p>Prepárate para reuniones, presentaciones y comunicación profesional.</p><div class="price">$240 / mes</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="container">
+        <h2>Catálogo de IA</h2>
+        <div class="chip-row">
+          <button class="chip active">Todos</button>
+          <button class="chip">Escritura</button>
+          <button class="chip">Diseño</button>
+          <button class="chip">Código</button>
+          <button class="chip">Marketing</button>
+          <button class="chip">Investigación</button>
+          <button class="chip">Productividad</button>
+          <button class="chip">Video</button>
+          <button class="chip">Ventas</button>
+          <button class="chip">Música</button>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Escritura</span></div><p>Asistente de IA para contenido e ideas.</p><footer><span>Freemium</span><span>Escritura</span></footer></a>
+          <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Escritura</span></div><p>Soporte analítico y de textos largos.</p><footer><span>Freemium</span><span>Escritura</span></footer></a>
+          <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>GitHub Copilot</h3><span class="badge">Código</span></div><p>Asistencia para codificar con IA.</p><footer><span>Suscripción</span><span>Código</span></footer></a>
+          <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Diseño</span></div><p>Generación visual creativa.</p><footer><span>Suscripción</span><span>Diseño</span></footer></a>
+          <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Investigación</span></div><p>Motor de respuesta con fuentes.</p><footer><span>Freemium</span><span>Investigación</span></footer></a>
+          <a class="tool-item" href="https://suno.com/" target="_blank"><div class="meta"><h3>Suno</h3><span class="badge">Música</span></div><p>Generación de música por texto.</p><footer><span>Freemium</span><span>Música</span></footer></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="additional-tools">
+      <div class="container">
+        <h2>Herramientas adicionales de IA</h2>
+        <div class="additional-tool-grid">
+          <article class="additional-tool-card"><h3>Mistral Le Chat</h3><p>Plataforma de chat con modelos abiertos y respuestas rápidas para trabajos técnicos y cotidianos.</p></article>
+          <article class="additional-tool-card"><h3>DeepSeek</h3><p>Modelo de IA potente para programación, análisis y tareas de contenido.</p></article>
+          <article class="additional-tool-card"><h3>Grok</h3><p>Asistente de IA con enfoque en datos en tiempo real y contexto social.</p></article>
+          <article class="additional-tool-card"><h3>Meta AI</h3><p>Asistente de IA para texto, imágenes y búsquedas dentro del ecosistema de Meta.</p></article>
+          <article class="additional-tool-card"><h3>Hugging Face Chat</h3><p>Plataforma para probar modelos abiertos y herramientas de IA accesibles.</p></article>
+          <article class="additional-tool-card"><h3>Character.AI</h3><p>Personajes virtuales y conversaciones con estilo de chatbot personalizado.</p></article>
+          <article class="additional-tool-card"><h3>Pi AI</h3><p>Asistente conversacional más amigable para organización personal y planificación.</p></article>
+          <article class="additional-tool-card"><h3>Replika AI</h3><p>Compañero de IA para conversaciones naturales y apoyo emocional ligero.</p></article>
+          <article class="additional-tool-card"><h3>Claude Projects</h3><p>Espacio de trabajo para documentos, proyectos y análisis de archivos grandes.</p></article>
+          <article class="additional-tool-card"><h3>Google NotebookLM</h3><p>Herramienta para resumir, consultar y aprender a partir de documentos y PDFs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <h2>Precios simples</h2>
+        <div class="tool-grid">
+          <article class="tool-item"><div class="meta"><h3>Starter</h3><span class="badge">$0</span></div><p>Perfecto para explorar por primera vez.</p><footer><span>Básico</span><span>✓</span></footer></article>
+          <article class="tool-item"><div class="meta"><h3>Pro</h3><span class="badge">$29</span></div><p>Filtros avanzados y comparación para equipos.</p><footer><span>Popular</span><span>✓</span></footer></article>
+          <article class="tool-item"><div class="meta"><h3>Enterprise</h3><span class="badge">Personalizado</span></div><p>Para grandes equipos y flujos de trabajo a medida.</p><footer><span>Business</span><span>✓</span></footer></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 ToolBazaar</div>
+      <div class="lang-links">
+        <a href="/index-en.html">English</a>
+        <a href="/index.html">Azərbaycan</a>
+        <a href="/index-ru.html">Русский</a>
+        <a href="/index-tr.html">Türkçe</a>
+        <a href="/index-es.html">Español</a>
+        <a href="/index-zh.html">中文</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
