@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="az">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToolBazaar | 128 AI Alət Kataloqu</title>
-    <meta name="description" content="ToolBazaar — AI alətlərini kəşf edin, müqayisə edin və işiniz üçün ən uyğun seçimləri tapın." />
+    <title>ToolBazaar | AI Tools Catalog</title>
+    <meta name="description" content="ToolBazaar — discover, compare, and choose the best AI tools for research, writing, coding, music, marketing, and productivity." />
     <style>
       :root {
         --bg: #06111d;
@@ -32,7 +32,7 @@
       .site-header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(6,17,29,0.72); border-bottom: 1px solid var(--line); }
       .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
       .brand { display: inline-flex; align-items: center; gap: 12px; letter-spacing: 0.06em; font-weight: 800; }
-      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 18px; font-weight: 900; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 1rem; font-weight: 900; }
       .nav-links { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: 0.96rem; }
       .nav-actions { display: flex; align-items: center; gap: 14px; }
       .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 1px solid var(--line); transition: 0.2s ease; }
@@ -41,7 +41,7 @@
       .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); }
       .hero { padding: 90px 0 50px; }
       .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; font-weight: 700; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
       h1 { margin: 18px 0 16px; font-size: clamp(2.9rem, 5vw, 5.2rem); line-height: 0.95; letter-spacing: -0.07em; }
       .hero-copy p { margin: 0 0 28px; max-width: 620px; font-size: 1.1rem; color: var(--muted); }
       .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
@@ -95,13 +95,13 @@
           <span>TOOLBAZAAR</span>
         </a>
         <nav class="nav-links" aria-label="Main menu">
-          <a href="#catalog">Kataloq</a>
-          <a href="#features">Xüsusiyyətlər</a>
-          <a href="#pricing">Qiymətlər</a>
+          <a href="#catalog">Catalog</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
         </nav>
         <div class="nav-actions">
-          <a class="btn btn-secondary" href="#pricing">Qiymətlər</a>
-          <a class="btn btn-primary" href="#catalog">Kataloqa bax</a>
+          <a class="btn btn-secondary" href="#pricing">Pricing</a>
+          <a class="btn btn-primary" href="#catalog">Explore catalog</a>
         </div>
       </div>
     </header>
@@ -110,29 +110,29 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
-            <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
-            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün ideal variantlar burada toplanır.</p>
+            <span class="eyebrow">✔ Smart AI selection</span>
+            <h1>Find the best AI tools for your work.</h1>
+            <p>ToolBazaar helps teams discover, compare, and choose AI tools for research, writing, coding, design, marketing, music creation, and product development. Explore the most useful AI software in one place.</p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
-              <a class="btn btn-secondary" href="#pricing">Başlamaq</a>
+              <a class="btn btn-primary" href="#catalog">Browse 109 tools</a>
+              <a class="btn btn-secondary" href="#pricing">Get started</a>
             </div>
             <div class="stats">
-              <div class="stat"><strong id="toolCount">128</strong><span>AI alət</span></div>
-              <div class="stat"><strong>8</strong><span>Kateqoriya</span></div>
-              <div class="stat"><strong>24/7</strong><span>İstifadə</span></div>
+              <div class="stat"><strong id="toolCount">109</strong><span>AI tools</span></div>
+              <div class="stat"><strong>10</strong><span>Categories</span></div>
+              <div class="stat"><strong>24/7</strong><span>Access</span></div>
             </div>
           </div>
           <div class="hero-card" aria-label="AI tool overview">
             <div class="dashboard">
               <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
               <div class="dashboard-body">
-                <div class="search-pill"><span>🔎</span><span><strong>Axtar:</strong> AI marketinq alətləri</span></div>
+                <div class="search-pill"><span>🔎</span><span><strong>Search:</strong> AI research and music tools</span></div>
                 <div class="mini-grid">
-                  <div class="mini-card"><span class="tag">Dizayn</span><h3>Midjourney</h3><p>Brend vizualları və konseptlər üçün AI.</p></div>
-                  <div class="mini-card"><span class="tag">Kod</span><h3>GitHub Copilot</h3><p>Yazılım komandaları üçün sürətli inkişaf köməkçisi.</p></div>
-                  <div class="mini-card"><span class="tag">SEO</span><h3>Frase</h3><p>Məzmun və axtarış optimizasiyası üçün.</p></div>
-                  <div class="mini-card"><span class="tag">Yazı</span><h3>ChatGPT</h3><p>Yazı, ideya və analitik köməkçi.</p></div>
+                  <div class="mini-card"><span class="tag">Research</span><h3>Perplexity</h3><p>Source-backed answers and deep web research AI.</p></div>
+                  <div class="mini-card"><span class="tag">Coding</span><h3>GitHub Copilot</h3><p>AI pair programming for developers and teams.</p></div>
+                  <div class="mini-card"><span class="tag">Music</span><h3>Suno</h3><p>Generate tracks and lyrics from a text prompt.</p></div>
+                  <div class="mini-card"><span class="tag">Writing</span><h3>ChatGPT</h3><p>Draft, summarize, brainstorm, and analyze content.</p></div>
                 </div>
               </div>
             </div>
@@ -143,21 +143,22 @@
       <section id="catalog">
         <div class="container">
           <div class="section-head">
-            <h2>128 AI alət kataloqu</h2>
-            <p>Buradakı alətləri klikləyib orijinal sayta keçin.</p>
+            <h2>AI Tools Catalog</h2>
+            <p>Click any tool to open the official website.</p>
           </div>
           <div class="catalog-tools">
             <div class="tool-filters">
               <div class="filter-chips">
-                <button class="chip active" data-filter="all">Bütün</button>
-                <button class="chip" data-filter="Yazı">Yazı</button>
-                <button class="chip" data-filter="Dizayn">Dizayn</button>
-                <button class="chip" data-filter="Kod">Kod</button>
-                <button class="chip" data-filter="Marketinq">Marketinq</button>
-                <button class="chip" data-filter="Araşdırma">Araşdırma</button>
-                <button class="chip" data-filter="Produktivlik">Produktivlik</button>
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="Writing">Writing</button>
+                <button class="chip" data-filter="Design">Design</button>
+                <button class="chip" data-filter="Coding">Coding</button>
+                <button class="chip" data-filter="Marketing">Marketing</button>
+                <button class="chip" data-filter="Research">Research</button>
+                <button class="chip" data-filter="Productivity">Productivity</button>
                 <button class="chip" data-filter="Video">Video</button>
-                <button class="chip" data-filter="Satış">Satış</button>
+                <button class="chip" data-filter="Sales">Sales</button>
+                <button class="chip" data-filter="Music">Music</button>
               </div>
             </div>
           </div>
@@ -167,21 +168,21 @@
 
       <section id="pricing">
         <div class="container">
-          <div class="section-head"><h2>Sadə qiymətləndirmə</h2><p>Başlayın, böyüyün və ehtiyacınız artdıqca genişlədin.</p></div>
+          <div class="section-head"><h2>Simple pricing</h2><p>Start simple, scale as your needs grow.</p></div>
           <div class="tool-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
             <article class="tool-item" style="display:block;">
               <div class="meta"><h3>Starter</h3><span class="badge">$0</span></div>
-              <p>İlk baxış və baza axtarış üçün ideal.</p>
-              <footer><span>Əsas</span><span>✅</span></footer>
+              <p>Perfect for testing the platform and browsing the catalog.</p>
+              <footer><span>Basic</span><span>✅</span></footer>
             </article>
             <article class="tool-item" style="display:block;">
               <div class="meta"><h3>Pro</h3><span class="badge">$29</span></div>
-              <p>Komandalar üçün dərin filtr, müqayisə və prioritet tövsiyə.</p>
-              <footer><span>İstifadə</span><span>✅</span></footer>
+              <p>Advanced filters, comparisons, and prioritized recommendations.</p>
+              <footer><span>Popular</span><span>✅</span></footer>
             </article>
             <article class="tool-item" style="display:block;">
-              <div class="meta"><h3>Enterprise</h3><span class="badge">Özəl</span></div>
-              <p>Çoxlu komanda, xüsusi panel və həllər.</p>
+              <div class="meta"><h3>Enterprise</h3><span class="badge">Custom</span></div>
+              <p>For large teams, custom workflows, and advanced AI adoption.</p>
               <footer><span>Business</span><span>✅</span></footer>
             </article>
           </div>
@@ -193,7 +194,7 @@
       <div class="container footer-inner">
         <div>© 2026 ToolBazaar</div>
         <div class="footer-links">
-          <a href="/">Home</a>
+          <a href="#top">Home</a>
           <a href="/privacy-policy-en.html">Privacy Policy</a>
         </div>
       </div>
@@ -201,115 +202,127 @@
 
     <script>
       const tools = [
-        { name: 'ChatGPT', category: 'Yazı', price: 'Freemium', description: 'Mətn, ideya və analitik cavablar üçün geniş AI asistanı.', url: 'https://chat.openai.com/' },
-        { name: 'Claude', category: 'Yazı', price: 'Freemium', description: 'Uzun mətn, sənəd və analitik işlər üçün güclü AI.', url: 'https://claude.ai/' },
-        { name: 'Gemini', category: 'Yazı', price: 'Freemium', description: 'Google-aidli yazı, axtarış və multimodal AI.', url: 'https://gemini.google.com/' },
-        { name: 'Perplexity', category: 'Araşdırma', price: 'Freemium', description: 'Mənbə əsaslı axtarış və cavablar.', url: 'https://www.perplexity.ai/' },
-        { name: 'GitHub Copilot', category: 'Kod', price: 'Abunə', description: 'Kod yazımı və tövsiyə asistanı.', url: 'https://github.com/features/copilot' },
-        { name: 'Cursor', category: 'Kod', price: 'Freemium', description: 'Kod editoru üzərində AI inkişaf asistanı.', url: 'https://cursor.com/' },
-        { name: 'Codeium', category: 'Kod', price: 'Freemium', description: 'Kod autocompletion və AI dəstəyi.', url: 'https://codeium.com/' },
-        { name: 'Tabnine', category: 'Kod', price: 'Freemium', description: 'Kod yazımı üçün AI tamamlayıcısı.', url: 'https://www.tabnine.com/' },
-        { name: 'Replit AI', category: 'Kod', price: 'Freemium', description: 'Browser əsaslı kod yazımı və test.', url: 'https://replit.com/ai' },
-        { name: 'Amazon CodeWhisperer', category: 'Kod', price: 'Freemium', description: 'AWS-də AI kod köməkçisi.', url: 'https://aws.amazon.com/codewhisperer/' },
-        { name: 'Sourcegraph Cody', category: 'Kod', price: 'Freemium', description: 'Kod bazasında AI axtarış və dəstək.', url: 'https://sourcegraph.com/cody' },
-        { name: 'OpenHands', category: 'Kod', price: 'Açıq', description: 'Açıq mənbəli developer AI asistanı.', url: 'https://github.com/All-Hands-AI/OpenHands' },
-        { name: 'Aider', category: 'Kod', price: 'Açıq', description: 'AI ilə kod yazımı və refactoring.', url: 'https://aider.chat/' },
-        { name: 'Continue', category: 'Kod', price: 'Açıq', description: 'Editor daxilində AI assistan.', url: 'https://continue.dev/' },
-        { name: 'Cline', category: 'Kod', price: 'Freemium', description: 'Terminal və tətbiq daxilində AI dəstəyi.', url: 'https://cline.bot/' },
-        { name: 'CodeRabbit', category: 'Kod', price: 'Freemium', description: 'PR və kod review üçün AI.', url: 'https://www.coderabbit.ai/' },
-        { name: 'Blackbox AI', category: 'Kod', price: 'Freemium', description: 'Kod tapma və yazma asistanı.', url: 'https://www.blackbox.ai/' },
-        { name: 'Debuild', category: 'Kod', price: 'Freemium', description: 'Mikroservislər üçün AI inkişaf dəstəyi.', url: 'https://debuild.com/' },
-        { name: 'Midjourney', category: 'Dizayn', price: 'Abunə', description: 'Gözəl konsept və vizual yaradıcı AI.', url: 'https://www.midjourney.com/' },
-        { name: 'DALL·E 3', category: 'Dizayn', price: 'Freemium', description: 'Mətnə əsaslanan vizual yaradıcı model.', url: 'https://openai.com/dall-e-3' },
-        { name: 'Stable Diffusion', category: 'Dizayn', price: 'Freemium', description: 'Açıq model ilə şəkil və vizual yaradıcılığı.', url: 'https://stability.ai/' },
-        { name: 'Adobe Firefly', category: 'Dizayn', price: 'Abunə', description: 'Adobe məhsullarında AI yaradıcı tool.', url: 'https://firefly.adobe.com/' },
-        { name: 'Leonardo AI', category: 'Dizayn', price: 'Freemium', description: 'İllüstrasiya və konsept vizual AI.', url: 'https://leonardo.ai/' },
-        { name: 'Ideogram', category: 'Dizayn', price: 'Freemium', description: 'Logo və metin əsaslı vizual yaradıcılığı.', url: 'https://ideogram.ai/' },
-        { name: 'Canva AI', category: 'Dizayn', price: 'Freemium', description: 'Dizayn, banner və social media materialı.', url: 'https://www.canva.com/ai-image-generator/' },
-        { name: 'Playground AI', category: 'Dizayn', price: 'Freemium', description: 'Stil və vizual konseptlər üçün AI.', url: 'https://playground.com/' },
-        { name: 'NightCafe', category: 'Dizayn', price: 'Freemium', description: 'Poster və illüstrasiya üçün AI.', url: 'https://creator.nightcafe.studio/' },
-        { name: 'Photoroom', category: 'Dizayn', price: 'Freemium', description: 'Fotolarda arxa plan və məhsul təmizlənməsi.', url: 'https://www.photoroom.com/' },
-        { name: 'Remove.bg', category: 'Dizayn', price: 'Freemium', description: 'Şəkildən fonu avtomatik silən AI.', url: 'https://www.remove.bg/' },
-        { name: 'Clipdrop', category: 'Dizayn', price: 'Freemium', description: 'Şəkil redaktə və qrafik alətləri.', url: 'https://clipdrop.co/' },
-        { name: 'Deep Dream Generator', category: 'Dizayn', price: 'Freemium', description: 'Vizual effektlər və konseptlər.', url: 'https://deepdreamgenerator.com/' },
-        { name: 'Runway', category: 'Video', price: 'Freemium', description: 'AI video yaradılması və redaktəsi.', url: 'https://runwayml.com/' },
-        { name: 'Pika', category: 'Video', price: 'Freemium', description: 'Video və animasiya yaradıcı AI.', url: 'https://pika.art/' },
-        { name: 'HeyGen', category: 'Video', price: 'Freemium', description: 'Avatar və AI video presenterlər.', url: 'https://www.heygen.com/' },
-        { name: 'Synthesia', category: 'Video', price: 'Abunə', description: 'AI avatar ilə video hazırlayıcısı.', url: 'https://www.synthesia.io/' },
-        { name: 'Descript', category: 'Video', price: 'Freemium', description: 'Video redaktə və səs təmizləmə.', url: 'https://www.descript.com/' },
-        { name: 'Veed', category: 'Video', price: 'Freemium', description: 'Video redaktə və subtitle asistanı.', url: 'https://www.veed.io/' },
-        { name: 'OpusClip', category: 'Video', price: 'Freemium', description: 'Uzun videoları qısa kliplərə çevirir.', url: 'https://www.opus.pro/' },
-        { name: 'Captions', category: 'Video', price: 'Freemium', description: 'AI ilə video dublyaj və alt yazı.', url: 'https://www.captions.ai/' },
-        { name: 'ElevenLabs', category: 'Video', price: 'Freemium', description: 'Səs və tələffüz üçün AI motoru.', url: 'https://elevenlabs.io/' },
-        { name: 'Murf', category: 'Video', price: 'Freemium', description: 'Səs və podcast üçün AI tələffüz.', url: 'https://murf.ai/' },
-        { name: 'Adobe Podcast', category: 'Video', price: 'Freemium', description: 'Audio təmizləmə və transkripsiya.', url: 'https://podcast.adobe.com/' },
-        { name: 'Krisp', category: 'Video', price: 'Freemium', description: 'Zənglərdə səs təmizləyici AI.', url: 'https://krisp.ai/' },
-        { name: 'Fireflies.ai', category: 'Produktivlik', price: 'Freemium', description: 'Görüş təqdimatı və transkript AI.', url: 'https://fireflies.ai/' },
-        { name: 'Otter.ai', category: 'Produktivlik', price: 'Freemium', description: 'Görüş və zəng transkriptləri.', url: 'https://otter.ai/' },
-        { name: 'Notion AI', category: 'Produktivlik', price: 'Freemium', description: 'Notion daxilində yazı və planlama asistanı.', url: 'https://www.notion.so/product/ai' },
-        { name: 'ClickUp AI', category: 'Produktivlik', price: 'Freemium', description: 'Tapşırıq və iş axını AI asistanı.', url: 'https://clickup.com/ai' },
-        { name: 'Asana AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda planlaması və əməliyyat AI.', url: 'https://asana.com/product/ai' },
-        { name: 'Trello AI', category: 'Produktivlik', price: 'Freemium', description: 'İş lövhəsi və prioritetizasiya.', url: 'https://trello.com/' },
-        { name: 'Slack AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda yazışmalarında AI özet.', url: 'https://slack.com/' },
-        { name: 'Zapier AI', category: 'Produktivlik', price: 'Freemium', description: 'İş axını avtomatlaşdırması.', url: 'https://zapier.com/ai' },
-        { name: 'Airtable AI', category: 'Produktivlik', price: 'Freemium', description: 'CRM və məhsul məlumatlarının AI asistanı.', url: 'https://airtable.com/' },
-        { name: 'Monday AI', category: 'Produktivlik', price: 'Freemium', description: 'Komanda xoşagəlməz iş axını AI.', url: 'https://monday.com/' },
-        { name: 'Motion', category: 'Produktivlik', price: 'Abunə', description: 'Vaxt planlaması və fəaliyyət optimizasiyası.', url: 'https://www.usemotion.com/' },
-        { name: 'Todoist AI', category: 'Produktivlik', price: 'Freemium', description: 'Tapşırıq prioritizasiya və planlama.', url: 'https://todoist.com/' },
-        { name: 'Evernote AI', category: 'Produktivlik', price: 'Freemium', description: 'Not və fikir asistanı.', url: 'https://evernote.com/' },
-        { name: 'Miro AI', category: 'Produktivlik', price: 'Freemium', description: 'Board və brainstorming AI.', url: 'https://miro.com/ai/' },
-        { name: 'Loom AI', category: 'Produktivlik', price: 'Freemium', description: 'Video qeyd və özet asistanı.', url: 'https://www.loom.com/' },
-        { name: 'Zettlr', category: 'Produktivlik', price: 'Freemium', description: 'Mətn və araşdırma idarəetmə aləti.', url: 'https://www.zettlr.com/' },
-        { name: 'Jasper', category: 'Marketinq', price: 'Abunə', description: 'Kampaniya və SEO AI yazı asistanı.', url: 'https://www.jasper.ai/' },
-        { name: 'Copy.ai', category: 'Marketinq', price: 'Freemium', description: 'Reklam və sosial media mətnlər.', url: 'https://www.copy.ai/' },
-        { name: 'Writesonic', category: 'Marketinq', price: 'Freemium', description: 'SEO və satış məzmunu üçün AI.', url: 'https://writesonic.com/' },
-        { name: 'Frase', category: 'Marketinq', price: 'Abunə', description: 'SEO, araşdırma və məzmun optimizasiyası.', url: 'https://www.frase.io/' },
-        { name: 'Surfer SEO', category: 'Marketinq', price: 'Abunə', description: 'Məzmun üçün SEO optimizasiyası.', url: 'https://surferseo.com/' },
-        { name: 'MarketMuse', category: 'Marketinq', price: 'Abunə', description: 'Məzmun strategiyası və SEO AI.', url: 'https://www.marketmuse.com/' },
-        { name: 'Outranking', category: 'Marketinq', price: 'Abunə', description: 'Məzmun planlaması və AI optimizasiya.', url: 'https://www.outranking.io/' },
-        { name: 'GrowthBar', category: 'Marketinq', price: 'Abunə', description: 'SEO analitikləri və AI məzmun.', url: 'https://growthbarseo.com/' },
-        { name: 'Semrush Copilot', category: 'Marketinq', price: 'Abunə', description: 'SEO və marketinq üçün AI köməkçi.', url: 'https://www.semrush.com/' },
-        { name: 'AdCreative.ai', category: 'Marketinq', price: 'Abunə', description: 'Reklam bannerləri və kreativləri.', url: 'https://adcreative.ai/' },
-        { name: 'Phrasee', category: 'Marketinq', price: 'Abunə', description: 'E-poçt və reklam mesajları üçün AI.', url: 'https://phrasee.co/' },
-        { name: 'Omnisend AI', category: 'Marketinq', price: 'Freemium', description: 'E-poçt marketinqi üçün AI avtomatlaşdırma.', url: 'https://www.omnisend.com/' },
-        { name: 'Persado', category: 'Marketinq', price: 'Abunə', description: 'Kreativ mesajlar və konversiya AI.', url: 'https://www.persado.com/' },
-        { name: 'HubSpot AI', category: 'Satış', price: 'Freemium', description: 'CRM və satış prosesləri üçün AI.', url: 'https://www.hubspot.com/products/sales' },
-        { name: 'Intercom Fin', category: 'Satış', price: 'Abunə', description: 'Müştəri dəstəyi chatbot AI.', url: 'https://www.intercom.com/ai' },
-        { name: 'Zendesk AI', category: 'Satış', price: 'Abunə', description: 'Dəstək və yardım prosesləri üçün AI.', url: 'https://www.zendesk.com/' },
-        { name: 'Drift', category: 'Satış', price: 'Abunə', description: 'Satış chatbot və pipeline avtomatlaşdırması.', url: 'https://www.drift.com/' },
-        { name: 'Salesforce Einstein', category: 'Satış', price: 'Abunə', description: 'CRM və satış analitikləri üçün AI.', url: 'https://www.salesforce.com/products/einstein/' },
-        { name: 'Freshdesk AI', category: 'Satış', price: 'Abunə', description: 'Müştəri dəstək sorğuları üçün AI.', url: 'https://www.freshworks.com/freshdesk/' },
-        { name: 'Kustomer AI', category: 'Satış', price: 'Abunə', description: 'Müştəri xidmətləri və satış AI.', url: 'https://www.kustomer.com/' },
-        { name: 'Gong', category: 'Satış', price: 'Abunə', description: 'Satış görüşləri və analitika AI.', url: 'https://www.gong.io/' },
-        { name: 'Lavender', category: 'Satış', price: 'Freemium', description: 'E-poçt yazımını optimizasiya edən AI.', url: 'https://www.lavender.ai/' },
-        { name: 'Apollo.io AI', category: 'Satış', price: 'Freemium', description: 'Lead tapma və outreach AI.', url: 'https://apollo.io/' },
-        { name: 'Outreach AI', category: 'Satış', price: 'Abunə', description: 'Outreach və pipeline AI.', url: 'https://www.outreach.io/' },
-        { name: 'Elicit', category: 'Araşdırma', price: 'Freemium', description: 'Elmi və akademik araşdırma üçün AI.', url: 'https://elicit.com/' },
-        { name: 'Consensus', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalələrə əsaslanan AI cavablar.', url: 'https://consensus.app/' },
-        { name: 'Scite', category: 'Araşdırma', price: 'Freemium', description: 'Məqalə dəyər və sitat analitikləri.', url: 'https://scite.ai/' },
-        { name: 'NotebookLM', category: 'Araşdırma', price: 'Freemium', description: 'Məzmun bazasında öyrənmə AI.', url: 'https://notebooklm.google.com/' },
-        { name: 'Semantic Scholar', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalə və məlumat axtarışı.', url: 'https://www.semanticscholar.org/' },
-        { name: 'ResearchRabbit', category: 'Araşdırma', price: 'Freemium', description: 'Məqalələr və əlaqəli tədqiqatlar.', url: 'https://www.researchrabbit.ai/' },
-        { name: 'Connected Papers', category: 'Araşdırma', price: 'Freemium', description: 'Məqalələr arasında əlaqə quran AI.', url: 'https://www.connectedpapers.com/' },
-        { name: 'OpenAlex', category: 'Araşdırma', price: 'Freemium', description: 'Açıq bibliometrik axtarış platforması.', url: 'https://openalex.org/' },
-        { name: 'Explainpaper', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalələri sadələşdirən AI.', url: 'https://www.explainpaper.com/' },
-        { name: 'Unriddle', category: 'Araşdırma', price: 'Freemium', description: 'Mətn və sənəd axtarışı üçün AI.', url: 'https://www.unriddle.ai/' },
-        { name: 'Paperpal', category: 'Araşdırma', price: 'Abunə', description: 'Akademik yazı və məqalə dəstəyi.', url: 'https://www.paperpal.com/' },
-        { name: 'Gensim', category: 'Araşdırma', price: 'Açıq', description: 'Metod və NLP üçün AI/ML alətləri.', url: 'https://radimrehurek.com/gensim/' },
-        { name: 'DeepResearch', category: 'Araşdırma', price: 'Freemium', description: 'Dərin informasiyalı araşdırma AI.', url: 'https://deepresearch.com/' },
-        { name: 'Chatsonic', category: 'Yazı', price: 'Freemium', description: 'Yazı və SEO məqsədli AI köməkçisi.', url: 'https://writesonic.com/chat' },
-        { name: 'Rytr', category: 'Yazı', price: 'Freemium', description: 'Blog, e-poçt və reklam mətnləri.', url: 'https://rytr.me/' },
-        { name: 'GrammarlyGO', category: 'Yazı', price: 'Freemium', description: 'Yazı və stil tərtibatı üçün AI.', url: 'https://www.grammarly.com/ai-writing' },
-        { name: 'Wordtune', category: 'Yazı', price: 'Freemium', description: 'Mətnin ifadəsi və üslubunu düzəldir.', url: 'https://www.wordtune.com/' },
-        { name: 'QuillBot', category: 'Yazı', price: 'Freemium', description: 'Parafoz və mətn sadələşdirilməsi.', url: 'https://quillbot.com/' },
-        { name: 'Hemingway AI', category: 'Yazı', price: 'Freemium', description: 'Mətnin anlaşılırlığını artırır.', url: 'https://hemingwayapp.com/' },
-        { name: 'Sudowrite', category: 'Yazı', price: 'Abunə', description: 'Roman və hekayə yaratmaq üçün AI.', url: 'https://www.sudowrite.com/' },
-        { name: 'NovelAI', category: 'Yazı', price: 'Abunə', description: 'Yazı və hikayət yaradıcı AI.', url: 'https://novelai.net/' },
-        { name: 'Anyword', category: 'Marketinq', price: 'Abunə', description: 'Reklam və konversiya optimizasiyası.', url: 'https://anyword.com/' },
-        { name: 'StoryChief', category: 'Marketinq', price: 'Abunə', description: 'Məzmun və marketing workflow AI.', url: 'https://storychief.com/' },
-        { name: 'CoSchedule AI', category: 'Marketinq', price: 'Abunə', description: 'Planlama və content optimization.', url: 'https://coschedule.com/' },
-        { name: 'Tinywow', category: 'Produktivlik', price: 'Freemium', description: 'Text və dokument işləmə alətləri.', url: 'https://tinywow.com/' },
-        { name: 'Poe', category: 'Yazı', price: 'Freemium', description: 'Bir neçə modelə birbaşa çıxış.', url: 'https://poe.com/' }
+        { name: 'ChatGPT', category: 'Writing', price: 'Freemium', description: 'General AI assistant for writing, ideation, and analysis.', url: 'https://chat.openai.com/' },
+        { name: 'Claude', category: 'Writing', price: 'Freemium', description: 'Strong AI for long-form writing, documents, and reasoning.', url: 'https://claude.ai/' },
+        { name: 'Gemini', category: 'Writing', price: 'Freemium', description: 'Google-powered writing, multimodal, and research assistant.', url: 'https://gemini.google.com/' },
+        { name: 'Perplexity', category: 'Research', price: 'Freemium', description: 'Search-driven answers grounded in sources and citations.', url: 'https://www.perplexity.ai/' },
+        { name: 'GitHub Copilot', category: 'Coding', price: 'Subscription', description: 'AI coding assistant for writing and reviewing code.', url: 'https://github.com/features/copilot' },
+        { name: 'Cursor', category: 'Coding', price: 'Freemium', description: 'AI-enhanced code editor for faster development.', url: 'https://cursor.com/' },
+        { name: 'Codeium', category: 'Coding', price: 'Freemium', description: 'Code autocompletion and AI development tools.', url: 'https://codeium.com/' },
+        { name: 'Tabnine', category: 'Coding', price: 'Freemium', description: 'AI code completion for developers and teams.', url: 'https://www.tabnine.com/' },
+        { name: 'Replit AI', category: 'Coding', price: 'Freemium', description: 'Browser-based coding, testing, and AI assistance.', url: 'https://replit.com/ai' },
+        { name: 'Amazon CodeWhisperer', category: 'Coding', price: 'Freemium', description: 'AI coding companion for AWS and software teams.', url: 'https://aws.amazon.com/codewhisperer/' },
+        { name: 'Sourcegraph Cody', category: 'Coding', price: 'Freemium', description: 'AI search and code assistance in codebases.', url: 'https://sourcegraph.com/cody' },
+        { name: 'OpenHands', category: 'Coding', price: 'Open source', description: 'Open-source AI developer assistant.', url: 'https://github.com/All-Hands-AI/OpenHands' },
+        { name: 'Aider', category: 'Coding', price: 'Open source', description: 'AI-driven coding and refactoring workflow.', url: 'https://aider.chat/' },
+        { name: 'Continue', category: 'Coding', price: 'Open source', description: 'AI assistant built into the IDE.', url: 'https://continue.dev/' },
+        { name: 'Cline', category: 'Coding', price: 'Freemium', description: 'AI assistance for terminal and application work.', url: 'https://cline.bot/' },
+        { name: 'CodeRabbit', category: 'Coding', price: 'Freemium', description: 'AI for PR reviews and code feedback.', url: 'https://www.coderabbit.ai/' },
+        { name: 'Blackbox AI', category: 'Coding', price: 'Freemium', description: 'AI code search, generation, and debugging helper.', url: 'https://www.blackbox.ai/' },
+        { name: 'Debuild', category: 'Coding', price: 'Freemium', description: 'AI support for microservices and application engineering.', url: 'https://debuild.com/' },
+        { name: 'Midjourney', category: 'Design', price: 'Subscription', description: 'High-quality AI image generation and concept art.', url: 'https://www.midjourney.com/' },
+        { name: 'DALL·E 3', category: 'Design', price: 'Freemium', description: 'Text-to-image generation from natural language prompts.', url: 'https://openai.com/dall-e-3' },
+        { name: 'Stable Diffusion', category: 'Design', price: 'Freemium', description: 'Open model for visual creation and image generation.', url: 'https://stability.ai/' },
+        { name: 'Adobe Firefly', category: 'Design', price: 'Subscription', description: 'Generative AI inside Adobe creative tools.', url: 'https://firefly.adobe.com/' },
+        { name: 'Leonardo AI', category: 'Design', price: 'Freemium', description: 'AI for illustration, concept art, and design workflows.', url: 'https://leonardo.ai/' },
+        { name: 'Ideogram', category: 'Design', price: 'Freemium', description: 'Text-to-image model for logos and branding.', url: 'https://ideogram.ai/' },
+        { name: 'Canva AI', category: 'Design', price: 'Freemium', description: 'AI-enhanced content creation for social and brand assets.', url: 'https://www.canva.com/ai-image-generator/' },
+        { name: 'Playground AI', category: 'Design', price: 'Freemium', description: 'Fast image generation and AI art experimentation.', url: 'https://playground.com/' },
+        { name: 'NightCafe', category: 'Design', price: 'Freemium', description: 'AI-powered poster and illustration generation.', url: 'https://creator.nightcafe.studio/' },
+        { name: 'Photoroom', category: 'Design', price: 'Freemium', description: 'AI background removal and product photo editing.', url: 'https://www.photoroom.com/' },
+        { name: 'Remove.bg', category: 'Design', price: 'Freemium', description: 'Automatic background removal for images.', url: 'https://www.remove.bg/' },
+        { name: 'Clipdrop', category: 'Design', price: 'Freemium', description: 'Image editing and creative design tools with AI.', url: 'https://clipdrop.co/' },
+        { name: 'Deep Dream Generator', category: 'Design', price: 'Freemium', description: 'AI visual effects and stylized image experiments.', url: 'https://deepdreamgenerator.com/' },
+        { name: 'Runway', category: 'Video', price: 'Freemium', description: 'AI video generation and editing workflow.', url: 'https://runwayml.com/' },
+        { name: 'Pika', category: 'Video', price: 'Freemium', description: 'Create motion and AI-generated video clips.', url: 'https://pika.art/' },
+        { name: 'HeyGen', category: 'Video', price: 'Freemium', description: 'AI avatar videos and marketing presentations.', url: 'https://www.heygen.com/' },
+        { name: 'Synthesia', category: 'Subscription', price: 'Subscription', description: 'AI avatar-based video creation for business use.', url: 'https://www.synthesia.io/' },
+        { name: 'Descript', category: 'Video', price: 'Freemium', description: 'Video editing and audio cleanup with AI features.', url: 'https://www.descript.com/' },
+        { name: 'Veed', category: 'Video', price: 'Freemium', description: 'Video editing and subtitle generation.', url: 'https://www.veed.io/' },
+        { name: 'OpusClip', category: 'Video', price: 'Freemium', description: 'Turn long videos into short, engaging clips.', url: 'https://www.opus.pro/' },
+        { name: 'Captions', category: 'Video', price: 'Freemium', description: 'AI dubbing and subtitling for video content.', url: 'https://www.captions.ai/' },
+        { name: 'ElevenLabs', category: 'Video', price: 'Freemium', description: 'Voice synthesis and text-to-speech with realistic quality.', url: 'https://elevenlabs.io/' },
+        { name: 'Murf', category: 'Video', price: 'Freemium', description: 'Voiceovers and podcast-style AI narration.', url: 'https://murf.ai/' },
+        { name: 'Adobe Podcast', category: 'Video', price: 'Freemium', description: 'Clean audio and transcription workflow for recordings.', url: 'https://podcast.adobe.com/' },
+        { name: 'Krisp', category: 'Video', price: 'Freemium', description: 'Remove background noise from calls and recordings.', url: 'https://krisp.ai/' },
+        { name: 'Fireflies.ai', category: 'Productivity', price: 'Freemium', description: 'Meeting notes, summaries, and AI transcripts.', url: 'https://fireflies.ai/' },
+        { name: 'Otter.ai', category: 'Productivity', price: 'Freemium', description: 'Transcription and conversation summaries.', url: 'https://otter.ai/' },
+        { name: 'Notion AI', category: 'Productivity', price: 'Freemium', description: 'AI writing and planning inside Notion workspaces.', url: 'https://www.notion.so/product/ai' },
+        { name: 'ClickUp AI', category: 'Productivity', price: 'Freemium', description: 'AI for tasks, project planning, and team productivity.', url: 'https://clickup.com/ai' },
+        { name: 'Asana AI', category: 'Productivity', price: 'Freemium', description: 'AI-powered work management and team coordination.', url: 'https://asana.com/product/ai' },
+        { name: 'Trello AI', category: 'Productivity', price: 'Freemium', description: 'AI-enhanced task tracking and collaboration.', url: 'https://trello.com/' },
+        { name: 'Slack AI', category: 'Productivity', price: 'Freemium', description: 'AI summaries and assistance in team chats.', url: 'https://slack.com/' },
+        { name: 'Zapier AI', category: 'Productivity', price: 'Freemium', description: 'Use AI to automate workflows and business tasks.', url: 'https://zapier.com/ai' },
+        { name: 'Airtable AI', category: 'Productivity', price: 'Freemium', description: 'AI workflows in databases and team operations.', url: 'https://airtable.com/' },
+        { name: 'Monday AI', category: 'Productivity', price: 'Freemium', description: 'AI support for planning, execution, and operations.', url: 'https://monday.com/' },
+        { name: 'Motion', category: 'Productivity', price: 'Subscription', description: 'AI calendar planning and time optimization.', url: 'https://www.usemotion.com/' },
+        { name: 'Todoist AI', category: 'Productivity', price: 'Freemium', description: 'Task prioritization and planning with AI.', url: 'https://todoist.com/' },
+        { name: 'Evernote AI', category: 'Productivity', price: 'Freemium', description: 'Note-taking and idea capture with AI support.', url: 'https://evernote.com/' },
+        { name: 'Miro AI', category: 'Productivity', price: 'Freemium', description: 'AI-powered brainstorming and visual collaboration.', url: 'https://miro.com/ai/' },
+        { name: 'Loom AI', category: 'Productivity', price: 'Freemium', description: 'AI video summaries and asynchronous communication.', url: 'https://www.loom.com/' },
+        { name: 'Zettlr', category: 'Productivity', price: 'Freemium', description: 'Writing and research organization software.', url: 'https://www.zettlr.com/' },
+        { name: 'Jasper', category: 'Marketing', price: 'Subscription', description: 'AI copywriting and campaign content generation.', url: 'https://www.jasper.ai/' },
+        { name: 'Copy.ai', category: 'Marketing', price: 'Freemium', description: 'Generate marketing copy and social media content.', url: 'https://www.copy.ai/' },
+        { name: 'Writesonic', category: 'Marketing', price: 'Freemium', description: 'SEO and marketing content generation for brands.', url: 'https://writesonic.com/' },
+        { name: 'Frase', category: 'Marketing', price: 'Subscription', description: 'SEO research and content optimization platform.', url: 'https://www.frase.io/' },
+        { name: 'Surfer SEO', category: 'Marketing', price: 'Subscription', description: 'AI-driven search optimization and content briefs.', url: 'https://surferseo.com/' },
+        { name: 'MarketMuse', category: 'Marketing', price: 'Subscription', description: 'AI tools for content strategy and SEO planning.', url: 'https://www.marketmuse.com/' },
+        { name: 'Outranking', category: 'Marketing', price: 'Subscription', description: 'AI content workflow and SEO optimization.', url: 'https://www.outranking.io/' },
+        { name: 'GrowthBar', category: 'Marketing', price: 'Subscription', description: 'SEO analytics and AI content suggestions.', url: 'https://growthbarseo.com/' },
+        { name: 'Semrush Copilot', category: 'Marketing', price: 'Subscription', description: 'AI assistant for digital marketing and SEO campaigns.', url: 'https://www.semrush.com/' },
+        { name: 'AdCreative.ai', category: 'Marketing', price: 'Subscription', description: 'AI-generated creatives for advertising campaigns.', url: 'https://adcreative.ai/' },
+        { name: 'Phrasee', category: 'Marketing', price: 'Subscription', description: 'AI optimization for email and ad copy.', url: 'https://phrasee.co/' },
+        { name: 'Omnisend AI', category: 'Marketing', price: 'Freemium', description: 'AI email marketing and customer automation.', url: 'https://www.omnisend.com/' },
+        { name: 'Persado', category: 'Marketing', price: 'Subscription', description: 'AI language generation for conversion campaigns.', url: 'https://www.persado.com/' },
+        { name: 'HubSpot AI', category: 'Sales', price: 'Freemium', description: 'AI for CRM workflows and sales productivity.', url: 'https://www.hubspot.com/products/sales' },
+        { name: 'Intercom Fin', category: 'Sales', price: 'Subscription', description: 'AI customer support and sales conversation assistant.', url: 'https://www.intercom.com/ai' },
+        { name: 'Zendesk AI', category: 'Sales', price: 'Subscription', description: 'AI-powered support and customer engagement tools.', url: 'https://www.zendesk.com/' },
+        { name: 'Drift', category: 'Sales', price: 'Subscription', description: 'AI chatbot and pipeline automation for sales teams.', url: 'https://www.drift.com/' },
+        { name: 'Salesforce Einstein', category: 'Sales', price: 'Subscription', description: 'CRM intelligence and predictive AI for revenue teams.', url: 'https://www.salesforce.com/products/einstein/' },
+        { name: 'Freshdesk AI', category: 'Sales', price: 'Subscription', description: 'Support automation and AI help desk workflows.', url: 'https://www.freshworks.com/freshdesk/' },
+        { name: 'Kustomer AI', category: 'Sales', price: 'Subscription', description: 'AI customer service and sales experience platform.', url: 'https://www.kustomer.com/' },
+        { name: 'Gong', category: 'Sales', price: 'Subscription', description: 'AI conversation intelligence for sales calls and revenue teams.', url: 'https://www.gong.io/' },
+        { name: 'Lavender', category: 'Sales', price: 'Freemium', description: 'AI writing assistant for outreach and sales emails.', url: 'https://www.lavender.ai/' },
+        { name: 'Apollo.io AI', category: 'Sales', price: 'Freemium', description: 'AI-powered prospecting and outreach automation.', url: 'https://apollo.io/' },
+        { name: 'Outreach AI', category: 'Sales', price: 'Subscription', description: 'AI support for outreach sequences and sales workflows.', url: 'https://www.outreach.io/' },
+        { name: 'Elicit', category: 'Research', price: 'Freemium', description: 'AI research workflow for academic and evidence-backed discovery.', url: 'https://elicit.com/' },
+        { name: 'Consensus', category: 'Research', price: 'Freemium', description: 'Academic literature search and answer generation.', url: 'https://consensus.app/' },
+        { name: 'Scite', category: 'Research', price: 'Freemium', description: 'Scientific citation analysis and literature intelligence.', url: 'https://scite.ai/' },
+        { name: 'NotebookLM', category: 'Research', price: 'Freemium', description: 'Research assistant built around your own documents and notes.', url: 'https://notebooklm.google.com/' },
+        { name: 'Semantic Scholar', category: 'Research', price: 'Freemium', description: 'Academic paper discovery and citation insights.', url: 'https://www.semanticscholar.org/' },
+        { name: 'ResearchRabbit', category: 'Research', price: 'Freemium', description: 'Explore connected literature and research networks.', url: 'https://www.researchrabbit.ai/' },
+        { name: 'Connected Papers', category: 'Research', price: 'Freemium', description: 'Visual map of related academic papers and ideas.', url: 'https://www.connectedpapers.com/' },
+        { name: 'OpenAlex', category: 'Research', price: 'Freemium', description: 'Open scholarly metadata and research graph platform.', url: 'https://openalex.org/' },
+        { name: 'Explainpaper', category: 'Research', price: 'Freemium', description: 'Simplify scientific papers with AI explanations.', url: 'https://www.explainpaper.com/' },
+        { name: 'Unriddle', category: 'Research', price: 'Freemium', description: 'AI search and question-answering for long documents.', url: 'https://www.unriddle.ai/' },
+        { name: 'Paperpal', category: 'Research', price: 'Subscription', description: 'Academic writing support and journal-ready editing.', url: 'https://www.paperpal.com/' },
+        { name: 'Gensim', category: 'Research', price: 'Open source', description: 'NLP and topic modeling toolkit for technical research.', url: 'https://radimrehurek.com/gensim/' },
+        { name: 'DeepResearch', category: 'Research', price: 'Freemium', description: 'AI research assistant for longer, more structured analysis.', url: 'https://deepresearch.com/' },
+        { name: 'Chatsonic', category: 'Writing', price: 'Freemium', description: 'AI writing tool for text generation and SEO workflows.', url: 'https://writesonic.com/chat' },
+        { name: 'Rytr', category: 'Writing', price: 'Freemium', description: 'AI writing for blog posts, emails, and marketing copy.', url: 'https://rytr.me/' },
+        { name: 'GrammarlyGO', category: 'Writing', price: 'Freemium', description: 'AI rewriting, ideation, and writing assistance.', url: 'https://www.grammarly.com/ai-writing' },
+        { name: 'Wordtune', category: 'Writing', price: 'Freemium', description: 'AI rewriting and tone improvement for sentences.', url: 'https://www.wordtune.com/' },
+        { name: 'QuillBot', category: 'Writing', price: 'Freemium', description: 'AI paraphrasing and summarizing for written content.', url: 'https://quillbot.com/' },
+        { name: 'Hemingway AI', category: 'Writing', price: 'Freemium', description: 'Simplify writing for clarity and readability.', url: 'https://hemingwayapp.com/' },
+        { name: 'Sudowrite', category: 'Writing', price: 'Subscription', description: 'AI writing assistance for fiction and storytelling.', url: 'https://www.sudowrite.com/' },
+        { name: 'NovelAI', category: 'Writing', price: 'Subscription', description: 'Creative writing assistant for stories and prose.', url: 'https://novelai.net/' },
+        { name: 'Anyword', category: 'Marketing', price: 'Subscription', description: 'AI copy optimization for marketing and conversion.', url: 'https://anyword.com/' },
+        { name: 'StoryChief', category: 'Marketing', price: 'Subscription', description: 'AI-assisted content planning and campaign workflows.', url: 'https://storychief.com/' },
+        { name: 'CoSchedule AI', category: 'Marketing', price: 'Subscription', description: 'Content planning and marketing workflow automation.', url: 'https://coschedule.com/' },
+        { name: 'Tinywow', category: 'Productivity', price: 'Freemium', description: 'Text and document productivity tools with AI support.', url: 'https://tinywow.com/' },
+        { name: 'Poe', category: 'Writing', price: 'Freemium', description: 'Access multiple AI models through one chat interface.', url: 'https://poe.com/' },
+        { name: 'Suno', category: 'Music', price: 'Freemium', description: 'Generate full songs from text prompts and lyrics.', url: 'https://suno.com/' },
+        { name: 'Udio', category: 'Music', price: 'Freemium', description: 'AI music generation for songs, vocals, and experiments.', url: 'https://www.udio.com/' },
+        { name: 'AIVA', category: 'Music', price: 'Freemium', description: 'AI composer for royalty-free music and soundtracks.', url: 'https://www.aiva.ai/' },
+        { name: 'Soundraw', category: 'Music', price: 'Freemium', description: 'Create custom background music for creators and brands.', url: 'https://soundraw.com/' },
+        { name: 'Boomy', category: 'Music', price: 'Freemium', description: 'AI-powered song generation and quick publishing workflow.', url: 'https://boomy.com/' },
+        { name: 'Loudly', category: 'Music', price: 'Freemium', description: 'AI-assisted music creation for content, creators, and streams.', url: 'https://loudly.com/' },
+        { name: 'Mubert', category: 'Music', price: 'Freemium', description: 'AI-generated royalty-free music for apps and creators.', url: 'https://mubert.com/' },
+        { name: 'Stable Audio', category: 'Music', price: 'Freemium', description: 'Generate audio loops and music with generative AI models.', url: 'https://stableaudio.com/' },
+        { name: 'Riffusion', category: 'Music', price: 'Open source', description: 'Generate music visuals and riffs with AI-driven diffusion.', url: 'https://riffusion.com/' },
+        { name: 'Soundful', category: 'Music', price: 'Freemium', description: 'Create custom royalty-free music and background tracks.', url: 'https://soundful.com/' },
+        { name: 'Voicify', category: 'Music', price: 'Freemium', description: 'Text-to-song and AI voice generation for creators.', url: 'https://voicify.ai/' },
+        { name: 'Mubert Render', category: 'Music', price: 'Freemium', description: 'Generate music streams and soundtracks from prompts.', url: 'https://render.mubert.com/' }
       ];
 
       const toolGrid = document.getElementById('toolGrid');
