@@ -7,7 +7,7 @@
   <style>
     :root { --bg:#06111d; --text:#edf6ff; --muted:#9bb5d1; --line:rgba(255,255,255,0.08); --primary:#7c9cff; --primary-2:#5eead4; --shadow:rgba(0,0,0,0.32); }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at top, rgba(124,156,255,0.22) 0%, rgba(124,156,255,0.04) 16%, transparent 30%), linear-gradient(180deg,#06111d 0%,#0b1524 35%,#07111d 100%);color:var(--text);line-height:1.6}
+    body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at top, rgba(124,156,255,0.22) 0%, rgba(124,156,255,0.04) 16%, transparent 30%), linear-gradient(180deg, #06111d 0%, #0b1524 35%, #07111d 100%);color:var(--text);line-height:1.6}
     a{text-decoration:none;color:inherit}
     .container{width:min(1180px, calc(100% - 32px)); margin:0 auto}
     .site-header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(6,17,29,0.72);border-bottom:1px solid var(--line)}
@@ -19,7 +19,7 @@
     .lang-links a{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,0.02)}
     .hero{padding:72px 0 42px}
     .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:center}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.04em}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);font-size:.8rem;font-weight:700}
     h1{margin:18px 0 14px;font-size:clamp(2.6rem, 5vw, 4.8rem);line-height:0.95;letter-spacing:-0.07em}
     p{color:var(--muted)}
     .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
@@ -37,6 +37,9 @@
     footer{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted);font-size:0.8rem}
     .footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted)}
     .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);cursor:pointer}
+    .chip.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#07111d;border-color:transparent}
     @media (max-width: 640px){.nav{flex-wrap:wrap}.hero-grid,.tool-grid{grid-template-columns:1fr}.nav-links{width:100%;justify-content:center}}</style>
 </head>
 <body>
@@ -69,19 +72,19 @@
           </div>
           <div class="stats">
             <div class="stat"><strong>128</strong><span>AI aracı</span></div>
-            <div class="stat"><strong>8</strong><span>Kategori</span></div>
+            <div class="stat"><strong>9</strong><span>Kategori</span></div>
             <div class="stat"><strong>24/7</strong><span>Erişim</span></div>
           </div>
         </div>
         <div class="card">
           <h3>Öne çıkan araçlar</h3>
           <div class="tool-grid">
-            <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Yazı</span></div><p>Yazı ve araştırma için AI asistanı.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-            <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Yazı</span></div><p>Uzun metin ve analiz desteği.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-            <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>Copilot</h3><span class="badge">Kod</span></div><p>AI kod üretimi ve asistanı.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
-            <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Tasarım</span></div><p>Yaratıcı AI görsel üretimi.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
-            <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Araştırma</span></div><p>Arama odaklı cevap ve kaynaklar.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-            <a class="tool-item" href="https://www.jasper.ai/" target="_blank"><div class="meta"><h3>Jasper</h3><span class="badge">Pazarlama</span></div><p>AI içerik ve kampanya kopyası.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
+            <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Yazı</span></div><p>Yazı ve araştırma için AI asistanı.</p><footer><span>Freemium</span><span>→</span></footer></a>
+            <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Yazı</span></div><p>Uzun metin ve analiz desteği.</p><footer><span>Freemium</span><span>→</span></footer></a>
+            <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>Copilot</h3><span class="badge">Kod</span></div><p>AI kod üretimi ve asistanı.</p><footer><span>Abonelik</span><span>→</span></footer></a>
+            <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Tasarım</span></div><p>Yaratıcı AI görsel üretimi.</p><footer><span>Abonelik</span><span>→</span></footer></a>
+            <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Araştırma</span></div><p>Arama odaklı cevap ve kaynaklar.</p><footer><span>Freemium</span><span>→</span></footer></a>
+            <a class="tool-item" href="https://suno.com/" target="_blank"><div class="meta"><h3>Suno</h3><span class="badge">Müzik</span></div><p>Metin istemiyle orijinal müzik üretir.</p><footer><span>Freemium</span><span>→</span></footer></a>
           </div>
         </div>
       </div>
@@ -89,13 +92,25 @@
     <section id="catalog">
       <div class="container">
         <h2>AI Kataloğu</h2>
+        <div class="chip-row">
+          <button class="chip active">Tümü</button>
+          <button class="chip">Yazı</button>
+          <button class="chip">Tasarım</button>
+          <button class="chip">Kod</button>
+          <button class="chip">Pazarlama</button>
+          <button class="chip">Araştırma</button>
+          <button class="chip">Verimlilik</button>
+          <button class="chip">Video</button>
+          <button class="chip">Satış</button>
+          <button class="chip">Müzik</button>
+        </div>
         <div class="tool-grid">
-          <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Yazı</span></div><p>Yazı ve bilgi asistanı.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-          <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Yazı</span></div><p>Detaylı analiz ve uzun metin.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-          <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>GitHub Copilot</h3><span class="badge">Kod</span></div><p>AI destekli kod üretimi.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
-          <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Tasarım</span></div><p>Yaratıcı AI görsel üretimi.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
-          <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Araştırma</span></div><p>Arama ve kaynaklı cevaplar.</p><footer><span>Freemium</span><span>↗</span></footer></a>
-          <a class="tool-item" href="https://www.jasper.ai/" target="_blank"><div class="meta"><h3>Jasper</h3><span class="badge">Pazarlama</span></div><p>AI ile marka ve kampanya kopyası.</p><footer><span>Ücretli</span><span>↗</span></footer></a>
+          <a class="tool-item" href="https://chat.openai.com/" target="_blank"><div class="meta"><h3>ChatGPT</h3><span class="badge">Yazı</span></div><p>Yazı ve fikir asistanı.</p><footer><span>Freemium</span><span>→</span></footer></a>
+          <a class="tool-item" href="https://claude.ai/" target="_blank"><div class="meta"><h3>Claude</h3><span class="badge">Yazı</span></div><p>Detaylı analiz ve uzun metin.</p><footer><span>Freemium</span><span>→</span></footer></a>
+          <a class="tool-item" href="https://github.com/features/copilot" target="_blank"><div class="meta"><h3>GitHub Copilot</h3><span class="badge">Kod</span></div><p>AI destekli kod üretimi.</p><footer><span>Abonelik</span><span>→</span></footer></a>
+          <a class="tool-item" href="https://www.midjourney.com/" target="_blank"><div class="meta"><h3>Midjourney</h3><span class="badge">Tasarım</span></div><p>Yaratıcı AI görsel üretimi.</p><footer><span>Abonelik</span><span>→</span></footer></a>
+          <a class="tool-item" href="https://www.perplexity.ai/" target="_blank"><div class="meta"><h3>Perplexity</h3><span class="badge">Araştırma</span></div><p>Kaynaklı arama ve cevaplar.</p><footer><span>Freemium</span><span>→</span></footer></a>
+          <a class="tool-item" href="https://suno.com/" target="_blank"><div class="meta"><h3>Suno</h3><span class="badge">Müzik</span></div><p>Metin istemiyle AI müzik üretimi.</p><footer><span>Freemium</span><span>→</span></footer></a>
         </div>
       </div>
     </section>
