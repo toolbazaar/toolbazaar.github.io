@@ -33,7 +33,7 @@
       .site-header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(6,17,29,0.72); border-bottom: 1px solid var(--line); }
       .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 18px; }
       .brand { display: inline-flex; align-items: center; gap: 12px; letter-spacing: 0.06em; font-weight: 800; }
-      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 1.08rem; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 18px; font-weight: 800; }
       .nav-links, .lang-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
       .nav-links { color: var(--muted); font-size: 0.96rem; }
       .lang-links a { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.8rem; }
@@ -44,14 +44,14 @@
       .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); }
       .hero { padding: 90px 0 50px; }
       .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-weight: 700; font-size: 0.72rem; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.8rem; letter-spacing: 0.04em; }
       h1 { margin: 18px 0 16px; font-size: clamp(2.9rem, 5vw, 5.2rem); line-height: 0.95; letter-spacing: -0.07em; }
       .hero-copy p { margin: 0 0 28px; max-width: 620px; font-size: 1.1rem; color: var(--muted); }
       .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
       .stats { display: flex; flex-wrap: wrap; gap: 26px; }
       .stat strong { display: block; font-size: 1.9rem; letter-spacing: -0.05em; }
       .stat span { color: var(--muted); font-size: 0.94rem; }
-      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 16px; }
+      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 0; }
       .dashboard { background: rgba(7,17,29,0.9); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
       .window-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
       .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
@@ -59,7 +59,7 @@
       .dot.yellow { background: #fdbf40; }
       .dot.green { background: #47d566; }
       .dashboard-body { padding: 20px; }
-      .search-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; color: var(--muted); font-size: 0.9rem; }
+      .search-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; color: var(--muted); }
       .search-pill strong { color: var(--text); }
       .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
       .mini-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
@@ -70,6 +70,10 @@
       .section-head { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 24px; }
       .section-head h2 { margin: 0; font-size: clamp(2.1rem, 4vw, 3rem); letter-spacing: -0.05em; }
       .section-head p { margin: 0; color: var(--muted); }
+      .features-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+      .feature-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+      .feature-card h3 { margin: 0 0 10px; }
+      .feature-card p { margin: 0; color: var(--muted); }
       .catalog-tools { display: grid; grid-template-columns: 1fr; gap: 22px; }
       .tool-filters { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 22px; padding: 18px; }
       .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -92,8 +96,8 @@
       .footer { border-top: 1px solid var(--line); padding: 28px 0 60px; color: var(--muted); }
       .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 12px; }
-      @media (max-width: 980px) { .hero-grid, .tool-grid, .courses-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
-      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid, .courses-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 980px) { .hero-grid, .features-grid, .tool-grid, .courses-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
+      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .features-grid, .tool-grid, .courses-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -123,7 +127,7 @@
           <div class="hero-copy">
             <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
             <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
-            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün AI köməkçisini düzgün tapmaq çox vacibdir.</p>
+            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün daha sürətli qərar verməyə kömək edir.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
               <a class="btn btn-secondary" href="#courses">İngilis kursları</a>
@@ -147,6 +151,29 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container">
+          <div class="section-head">
+            <h2>Xüsusiyyətlər</h2>
+            <p>Ümumi tapşırıqlar üçün optimallaşdırılmış seçimlər.</p>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h3>Kateqoriya filtrləri</h3>
+              <p>Yazı, kod, dizayn, marketinq, video və daha çox kateqoriya üzrə sürətli axtarış.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Orijinal linklər</h3>
+              <p>Hər alətə klikləməklə orijinal platformaya keçid və hazır informasiya.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Öyrənmə və inkişaf</h3>
+              <p>İngilis dili kursları ilə yanaşı, AI alətləri də iş və təhsil məqsədləri üçün uygunlaşdırılır.</p>
+            </article>
           </div>
         </div>
       </section>
