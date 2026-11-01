@@ -33,7 +33,7 @@
       .site-header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(6,17,29,0.72); border-bottom: 1px solid var(--line); }
       .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 18px; }
       .brand { display: inline-flex; align-items: center; gap: 12px; letter-spacing: 0.06em; font-weight: 800; }
-      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 1.1rem; font-weight: 900; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 1.08rem; }
       .nav-links, .lang-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
       .nav-links { color: var(--muted); font-size: 0.96rem; }
       .lang-links a { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.8rem; }
@@ -44,14 +44,14 @@
       .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); }
       .hero { padding: 90px 0 50px; }
       .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-weight: 700; font-size: 0.72rem; }
       h1 { margin: 18px 0 16px; font-size: clamp(2.9rem, 5vw, 5.2rem); line-height: 0.95; letter-spacing: -0.07em; }
       .hero-copy p { margin: 0 0 28px; max-width: 620px; font-size: 1.1rem; color: var(--muted); }
       .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
       .stats { display: flex; flex-wrap: wrap; gap: 26px; }
       .stat strong { display: block; font-size: 1.9rem; letter-spacing: -0.05em; }
       .stat span { color: var(--muted); font-size: 0.94rem; }
-      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 20px; }
+      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 16px; }
       .dashboard { background: rgba(7,17,29,0.9); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
       .window-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
       .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
@@ -92,26 +92,8 @@
       .footer { border-top: 1px solid var(--line); padding: 28px 0 60px; color: var(--muted); }
       .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 12px; }
-      .additional-tools { padding: 54px 0; background: rgba(255,255,255,0.01); }
-      .additional-tools h2 { margin: 0 0 26px; font-size: clamp(2rem, 4vw, 2.7rem); letter-spacing: -0.05em; text-align: center; }
-      .additional-tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-      .additional-tool-card { display: block; text-decoration: none; color: var(--text); background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; }
-      .additional-tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
-      .additional-tool-card h3 { margin: 0 0 12px; font-size: 1.08rem; }
-      .additional-tool-card p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 0.95rem; }
-      .english-learning-tools { padding: 64px 0; background: rgba(255,255,255,0.01); }
-      .english-learning-tools .section-head { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 26px; }
-      .english-learning-tools .section-head h2 { margin: 0; font-size: clamp(2.1rem, 4vw, 3rem); letter-spacing: -0.05em; }
-      .english-learning-tools .section-head p { margin: 0; color: var(--muted); }
-      .english-learning-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-      .english-learning-card { display: block; text-decoration: none; color: var(--text); background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 20px; min-height: 220px; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-      .english-learning-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); border-color: rgba(124,156,255,0.45); }
-      .english-learning-card .pill { display: inline-block; margin-bottom: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(124,156,255,0.12); color: var(--primary-2); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; }
-      .english-learning-card h3 { margin: 0 0 12px; font-size: 1.12rem; }
-      .english-learning-card p { margin: 0; color: var(--muted); line-height: 1.7; font-size: 0.96rem; }
       @media (max-width: 980px) { .hero-grid, .tool-grid, .courses-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
-      @media (max-width: 1100px) { .english-learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid, .courses-grid, .english-learning-grid { grid-template-columns: 1fr; } .english-learning-tools .section-head { display: block; } }
+      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid, .courses-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -129,14 +111,6 @@
           <a href="/index-en.html">English</a>
         </nav>
         <div class="nav-actions">
-          <div class="lang-links">
-            <a href="/index-en.html">EN</a>
-            <a href="/index.html">AZ</a>
-            <a href="/index-ru.html">RU</a>
-            <a href="/index-tr.html">TR</a>
-            <a href="/index-es.html">ES</a>
-            <a href="/index-zh.html">ZH</a>
-          </div>
           <a class="btn btn-secondary" href="#pricing">Qiymətlər</a>
           <a class="btn btn-primary" href="#catalog">Kataloqa bax</a>
         </div>
@@ -149,7 +123,7 @@
           <div class="hero-copy">
             <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
             <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
-            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün doğru alətləri tez tapın.</p>
+            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün AI köməkçisini düzgün tapmaq çox vacibdir.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
               <a class="btn btn-secondary" href="#courses">İngilis kursları</a>
@@ -232,67 +206,26 @@
         </div>
       </section>
 
-      <section class="english-learning-tools">
-        <div class="container">
-          <div class="section-head">
-            <h2>İngilis dili üçün AI alətlər</h2>
-            <p>Danışıq, yazı, qrammatika, söz daşı və tələffüz üçün.</p>
-          </div>
-
-          <div class="english-learning-grid">
-            <a class="english-learning-card" href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Söhbət</span><h3>ChatGPT</h3><p>İngilis dili ilə danışıq, tərcümə, yazı məşqləri və izah üçün ideal AI köməkçisi.</p></a>
-            <a class="english-learning-card" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Qrammatika</span><h3>Grammarly</h3><p>Qrammatika, üslub, mətn düzəlişi və yazı təkmilləşdirilməsi üçün istifadə olunur.</p></a>
-            <a class="english-learning-card" href="https://elsaspeak.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Tələffüz</span><h3>ELSA Speak</h3><p>Tələffüz, nitq, intonasiya və danışıq keyfiyyətini inkişaf etdirmək üçün mükəmməl vasitə.</p></a>
-            <a class="english-learning-card" href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer"><span class="pill">Tərcümə</span><h3>DeepL</h3><p>Ətraflı və düzgün tərcümə üçün yüksək keyfiyyətli AI alətidir.</p></a>
-            <a class="english-learning-card" href="https://quizlet.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Söz daşı</span><h3>Quizlet</h3><p>Yeni sözləri, ifadələri və qrammatika nümunələrini flashcard ilə öyrənmək üçün çox faydalıdır.</p></a>
-            <a class="english-learning-card" href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Gündəlik</span><h3>Duolingo</h3><p>Gündəlik məşq, təkrar və sadə, davamlı öyrənmə üçün ideal platformadır.</p></a>
-            <a class="english-learning-card" href="https://www.fluentu.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Dinləmə</span><h3>FluentU</h3><p>Video, musiqi və real kontekst əsasında İngilis dilini öyrənmək üçün böyük resursdur.</p></a>
-            <a class="english-learning-card" href="https://apps.ankiweb.net/" target="_blank" rel="noopener noreferrer"><span class="pill">Yaddaş</span><h3>Anki</h3><p>Flashcard və təkrarlı təlim sistemi ilə söz və qrammatika öyrənməsini sürətləndirir.</p></a>
-            <a class="english-learning-card" href="https://www.bbc.co.uk/learningenglish" target="_blank" rel="noopener noreferrer"><span class="pill">Dərslər</span><h3>BBC Learning English</h3><p>Audio, video və gündəlik İngilis dili dərsləri üçün yüksək keyfiyyətli mənbə.</p></a>
-            <a class="english-learning-card" href="https://www.englishcentral.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Danışıq</span><h3>English Central</h3><p>Video əsasında danışıq, dinləmə və tələffüz bacarıqlarını inkişaf etdirir.</p></a>
-            <a class="english-learning-card" href="https://www.speechify.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Dinləmə</span><h3>Speechify</h3><p>Mətnləri səsə çevirir və İngilis dilini dinləmə, oxu və tələffüz üçün faydalıdır.</p></a>
-            <a class="english-learning-card" href="https://www.memrise.com/" target="_blank" rel="noopener noreferrer"><span class="pill">Sözlər</span><h3>Memrise</h3><p>İngilis dili üçün söz, ifadə və real kontekstə əsaslanan öyrənmə sistemi.</p></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="additional-tools">
-        <div class="container">
-          <h2>Additional AI Tools</h2>
-          <div class="additional-tool-grid">
-            <a class="additional-tool-card" href="https://chat.mistral.ai/" target="_blank" rel="noopener noreferrer"><h3>Mistral Le Chat</h3><p>Açıq modellər və sürətli AI söhbət təcrübəsi üçün populyar platformadır; texniki suallara və gündəlik işlərə yaxşı uyğun gəlir.</p></a>
-            <a class="additional-tool-card" href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer"><h3>DeepSeek</h3><p>Kod, mətn və analitik tapşırıqlar üçün güclü və performanslı AI modelidir.</p></a>
-            <a class="additional-tool-card" href="https://x.ai/" target="_blank" rel="noopener noreferrer"><h3>Grok</h3><p>Real-time məlumat və sosial media konteksti ilə işləmək üçün nəzərdə tutulmuş AI asistanıdır.</p></a>
-            <a class="additional-tool-card" href="https://www.meta.ai/" target="_blank" rel="noopener noreferrer"><h3>Meta AI</h3><p>Meta ekosistemində mətn, şəkil və axtarış dəstəyini birləşdirən AI köməkçisidir.</p></a>
-            <a class="additional-tool-card" href="https://huggingface.co/chat" target="_blank" rel="noopener noreferrer"><h3>Hugging Face Chat</h3><p>Açıq mənbəli AI modellərini sınaqdan keçirmək və istifadə etmək üçün geniş platformadır.</p></a>
-            <a class="additional-tool-card" href="https://character.ai/" target="_blank" rel="noopener noreferrer"><h3>Character.AI</h3><p>Fərqli personaj formatında danışan AI dostları və virtual agentlər yaradır.</p></a>
-            <a class="additional-tool-card" href="https://pi.ai/talk" target="_blank" rel="noopener noreferrer"><h3>Pi AI</h3><p>Daha dostcasına, gündəlik həyat, planlama və motivasiya üçün nəzərdə tutulmuş AI söhbət platformasıdır.</p></a>
-            <a class="additional-tool-card" href="https://replika.com/" target="_blank" rel="noopener noreferrer"><h3>Replika AI</h3><p>İnsan kimi danışan AI yoldaşları üçün yaradılmış platformadır.</p></a>
-            <a class="additional-tool-card" href="https://claude.ai/projects" target="_blank" rel="noopener noreferrer"><h3>Claude Projects</h3><p>Böyük sənədlər, layihələr və məlumat bazaları ilə işləmək üçün optimallaşdırılmış AI iş mühitidir.</p></a>
-            <a class="additional-tool-card" href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer"><h3>Google NotebookLM</h3><p>PDF, sənəd və məlumatlar üzərində sorğu, xülasə və öyrənmə üçün faydalı AI vasitəsidir.</p></a>
-            <a class="additional-tool-card" href="https://brave.com/leo/" target="_blank" rel="noopener noreferrer"><h3>Brave Leo</h3><p>Brauzer daxilində axtarış, xülasə və AI köməkçisini təqdim edən alətdir.</p></a>
-            <a class="additional-tool-card" href="https://discord.com/" target="_blank" rel="noopener noreferrer"><h3>Discord AI Bots</h3><p>Serverlərdə məlumat toplama, sorğu cavabı və iş axınlarını avtomatlaşdıran AI botlardır.</p></a>
-          </div>
-        </div>
-      </section>
-
       <section id="pricing">
         <div class="container">
           <div class="section-head"><h2>Sadə qiymətləndirmə</h2><p>Başlayın, böyüyün və ehtiyacınız artdıqca genişlədin.</p></div>
           <div class="tool-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));">
-            <article class="tool-item" style="display:block;"><div class="meta"><h3>Starter</h3><span class="badge">$0</span></div><p>İlk baxış və baza axtarış üçün ideal.</p><footer><span>Əsas</span><span>✅</span></footer></article>
-            <article class="tool-item" style="display:block;"><div class="meta"><h3>Pro</h3><span class="badge">$29</span></div><p>Komandalar üçün dərin filtr, müqayisə və prioritet tövsiyə.</p><footer><span>İstifadə</span><span>✅</span></footer></article>
-            <article class="tool-item" style="display:block;"><div class="meta"><h3>Enterprise</h3><span class="badge">Özəl</span></div><p>Çoxlu komanda, xüsusi panel və həllər.</p><footer><span>Business</span><span>✅</span></footer></article>
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Starter</h3><span class="badge">$0</span></div>
+              <p>İlk baxış və baza axtarış üçün ideal.</p>
+              <footer><span>Əsas</span><span>✅</span></footer>
+            </article>
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Pro</h3><span class="badge">$29</span></div>
+              <p>Komandalar üçün dərin filtr, müqayisə və prioritet tövsiyə.</p>
+              <footer><span>İstifadə</span><span>✅</span></footer>
+            </article>
+            <article class="tool-item" style="display:block;">
+              <div class="meta"><h3>Enterprise</h3><span class="badge">Özəl</span></div>
+              <p>Çoxlu komanda, xüsusi panel və həllər.</p>
+              <footer><span>Business</span><span>✅</span></footer>
+            </article>
           </div>
-        </div>
-      </section>
-
-      <section style="padding: 32px 0 20px;">
-        <div style="max-width: 760px; margin: 0 auto; padding: 24px 20px; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; background: rgba(17, 25, 38, 0.8); text-align: center;">
-          <h3 style="margin: 0; font-size: 1.8rem; color: #edf6ff;">Reklam vermək üçün</h3>
-          <p style="margin: 12px 0 0; font-size: 1rem; color: #9bb5d1;">
-            <a href="mailto:yurdkredit@gmail.com" style="color: #7c9cff; text-decoration: none; font-weight: 700;">yurdkredit@gmail.com</a>
-          </p>
         </div>
       </section>
     </main>
@@ -302,10 +235,8 @@
         <div>© 2026 ToolBazaar</div>
         <div class="footer-links">
           <a href="/">Home</a>
-          <a href="/privacy-policy-az.html">Privacy Policy</a>
+          <a href="/privacy-policy-en.html">Privacy Policy</a>
           <a href="/index-en.html">English</a>
-          <a href="/index-es.html">Español</a>
-          <a href="/index-zh.html">中文</a>
         </div>
       </div>
     </footer>
@@ -405,7 +336,7 @@
         { name: 'OpenAlex', category: 'Araşdırma', price: 'Freemium', description: 'Açıq bibliometrik axtarış platforması.', url: 'https://openalex.org/' },
         { name: 'Explainpaper', category: 'Araşdırma', price: 'Freemium', description: 'Elmi məqalələri sadələşdirən AI.', url: 'https://www.explainpaper.com/' },
         { name: 'Unriddle', category: 'Araşdırma', price: 'Freemium', description: 'Mətn və sənəd axtarışı üçün AI.', url: 'https://www.unriddle.ai/' },
-        { name: 'Paperpal', category: 'Araştırma', price: 'Abunə', description: 'Akademik yazı və məqalə dəstəyi.', url: 'https://www.paperpal.com/' },
+        { name: 'Paperpal', category: 'Araşdırma', price: 'Abunə', description: 'Akademik yazı və məqalə dəstəyi.', url: 'https://www.paperpal.com/' },
         { name: 'Gensim', category: 'Araşdırma', price: 'Açıq', description: 'Metod və NLP üçün AI/ML alətləri.', url: 'https://radimrehurek.com/gensim/' },
         { name: 'DeepResearch', category: 'Araşdırma', price: 'Freemium', description: 'Dərin informasiyalı araşdırma AI.', url: 'https://deepresearch.com/' },
         { name: 'Chatsonic', category: 'Yazı', price: 'Freemium', description: 'Yazı və SEO məqsədli AI köməkçisi.', url: 'https://writesonic.com/chat' },
