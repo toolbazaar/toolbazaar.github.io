@@ -33,7 +33,7 @@
       .site-header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(14px); background: rgba(6,17,29,0.72); border-bottom: 1px solid var(--line); }
       .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
       .brand { display: inline-flex; align-items: center; gap: 12px; letter-spacing: 0.06em; font-weight: 800; }
-      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-size: 1rem; font-weight: 900; }
+      .brand-mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #07111d; display: grid; place-items: center; font-weight: 900; }
       .nav-links { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: 0.96rem; }
       .nav-actions { display: flex; align-items: center; gap: 14px; }
       .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 1px solid var(--line); transition: 0.2s ease; }
@@ -42,14 +42,14 @@
       .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); }
       .hero { padding: 90px 0 50px; }
       .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--muted); }
       h1 { margin: 18px 0 16px; font-size: clamp(2.9rem, 5vw, 5.2rem); line-height: 0.95; letter-spacing: -0.07em; }
       .hero-copy p { margin: 0 0 28px; max-width: 620px; font-size: 1.1rem; color: var(--muted); }
       .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
       .stats { display: flex; flex-wrap: wrap; gap: 26px; }
       .stat strong { display: block; font-size: 1.9rem; letter-spacing: -0.05em; }
       .stat span { color: var(--muted); font-size: 0.94rem; }
-      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 18px; }
+      .hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--line); border-radius: 30px; box-shadow: 0 28px 80px var(--shadow); padding: 0; }
       .dashboard { background: rgba(7,17,29,0.9); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
       .window-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
       .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
@@ -99,6 +99,7 @@
           <a href="#catalog">Kataloq</a>
           <a href="#features">Xüsusiyyətlər</a>
           <a href="#pricing">Qiymətlər</a>
+          <a href="/index-en.html">English</a>
         </nav>
         <div class="nav-actions">
           <a class="btn btn-secondary" href="#pricing">Qiymətlər</a>
@@ -113,14 +114,14 @@
           <div class="hero-copy">
             <span class="eyebrow">✔ AI alətlərinin düzgün seçimi</span>
             <h1>İşiniz üçün ən yaxşı AI alətlərini tapın.</h1>
-            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün hər şeyi bir yerdə təqdim edir.</p>
+            <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün ehtiyacınıza uyğun alətləri tapın.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
               <a class="btn btn-secondary" href="#pricing">Başlamaq</a>
             </div>
             <div class="stats">
               <div class="stat"><strong id="toolCount">128</strong><span>AI alət</span></div>
-              <div class="stat"><strong>8</strong><span>Kateqoriya</span></div>
+              <div class="stat"><strong>9</strong><span>Kateqoriya</span></div>
               <div class="stat"><strong>24/7</strong><span>İstifadə</span></div>
             </div>
           </div>
@@ -159,6 +160,7 @@
                 <button class="chip" data-filter="Produktivlik">Produktivlik</button>
                 <button class="chip" data-filter="Video">Video</button>
                 <button class="chip" data-filter="Satış">Satış</button>
+                <button class="chip" data-filter="Musiqi">Musiqi</button>
               </div>
             </div>
           </div>
@@ -196,6 +198,7 @@
         <div class="footer-links">
           <a href="/">Home</a>
           <a href="/privacy-policy-en.html">Privacy Policy</a>
+          <a href="/index-en.html">English</a>
         </div>
       </div>
     </footer>
@@ -310,7 +313,11 @@
         { name: 'StoryChief', category: 'Marketinq', price: 'Abunə', description: 'Məzmun və marketing workflow AI.', url: 'https://storychief.com/' },
         { name: 'CoSchedule AI', category: 'Marketinq', price: 'Abunə', description: 'Planlama və content optimization.', url: 'https://coschedule.com/' },
         { name: 'Tinywow', category: 'Produktivlik', price: 'Freemium', description: 'Text və dokument işləmə alətləri.', url: 'https://tinywow.com/' },
-        { name: 'Poe', category: 'Yazı', price: 'Freemium', description: 'Bir neçə modelə birbaşa çıxış.', url: 'https://poe.com/' }
+        { name: 'Poe', category: 'Yazı', price: 'Freemium', description: 'Bir neçə modelə birbaşa çıxış.', url: 'https://poe.com/' },
+        { name: 'Suno', category: 'Musiqi', price: 'Freemium', description: 'Mətnə əsaslanan orijinal musiqi və vokal yaradan AI.', url: 'https://suno.com/' },
+        { name: 'Udio', category: 'Musiqi', price: 'Freemium', description: 'AI ilə musiqi yaratmaq və dəqiqlaşdırmaq üçün alət.', url: 'https://www.udio.com/' },
+        { name: 'AIVA', category: 'Musiqi', price: 'Freemium', description: 'AI ilə film, reklama və proqram üçün musiqi kompozisiyası.', url: 'https://www.aiva.ai/' },
+        { name: 'Soundraw', category: 'Musiqi', price: 'Freemium', description: 'Məlumatlı prompt və musiqi istiqaməti üçün avtomatik yaradıcı.', url: 'https://soundraw.com/' }
       ];
 
       const toolGrid = document.getElementById('toolGrid');
