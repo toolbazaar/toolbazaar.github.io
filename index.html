@@ -81,11 +81,17 @@
       .tool-item .badge { border-radius: 999px; background: rgba(124,156,255,0.12); color: var(--primary-2); padding: 5px 9px; font-size: 0.72rem; font-weight: 700; }
       .tool-item p { margin: 0 0 12px; color: var(--muted); font-size: 0.93rem; }
       .tool-item footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--muted); font-size: 0.8rem; }
+      .courses-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+      .course-card { background: rgba(255,255,255,0.02); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+      .course-card .level { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(94,234,212,0.12); color: var(--primary-2); font-size: 0.72rem; font-weight: 700; margin-bottom: 12px; }
+      .course-card h3 { margin: 0 0 10px; }
+      .course-card p { margin: 0 0 14px; color: var(--muted); }
+      .course-card .price { color: var(--text); font-weight: 700; }
       .footer { border-top: 1px solid var(--line); padding: 28px 0 60px; color: var(--muted); }
       .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 12px; }
-      @media (max-width: 980px) { .hero-grid, .tool-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
-      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 980px) { .hero-grid, .tool-grid, .courses-grid { grid-template-columns: 1fr 1fr; } .nav-links { display: none; } }
+      @media (max-width: 620px) { .cta-row { flex-direction: column; } .cta-row .btn { width: 100%; } .tool-grid, .courses-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -97,6 +103,7 @@
         </a>
         <nav class="nav-links" aria-label="Main menu">
           <a href="#catalog">Kataloq</a>
+          <a href="#courses">İngilis dili kursları</a>
           <a href="#features">Xüsusiyyətlər</a>
           <a href="#pricing">Qiymətlər</a>
           <a href="/index-en.html">English</a>
@@ -117,7 +124,7 @@
             <p>ToolBazaar komandalar üçün AI alətlərin axtarışını, müqayisəsini və seçimini asanlaşdırır. Marketinq, dizayn, kodlama, strateji araşdırma və məhsul inkişafı üçün ehtiyacınıza uyğun alətləri tapın.</p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#catalog">128 alətə bax</a>
-              <a class="btn btn-secondary" href="#pricing">Başlamaq</a>
+              <a class="btn btn-secondary" href="#courses">İngilis kursları</a>
             </div>
             <div class="stats">
               <div class="stat"><strong id="toolCount">128</strong><span>AI alət</span></div>
@@ -138,6 +145,35 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses">
+        <div class="container">
+          <div class="section-head">
+            <h2>İngilis dili kursları</h2>
+            <p>Başlanğıc, orta və biznes səviyyələri üçün planlı öyrənmə.</p>
+          </div>
+          <div class="courses-grid">
+            <article class="course-card">
+              <span class="level">Başlanğıc</span>
+              <h3>Beginner English</h3>
+              <p>Əsas danışıq, gündəlik ifadələr, qrammatika və söz daşı.</p>
+              <div class="price">₼ 120 / ay</div>
+            </article>
+            <article class="course-card">
+              <span class="level">Orta</span>
+              <h3>Intermediate English</h3>
+              <p>Dinləmə, oxu, yazı və daha sərbəst ünsiyyət bacarıqları.</p>
+              <div class="price">₼ 180 / ay</div>
+            </article>
+            <article class="course-card">
+              <span class="level">Biznes</span>
+              <h3>Business English</h3>
+              <p>İş görüşləri, e-poçt yazmaq, prezentasiya və peşəkar ünsiyyət.</p>
+              <div class="price">₼ 240 / ay</div>
+            </article>
           </div>
         </div>
       </section>

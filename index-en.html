@@ -35,12 +35,18 @@
     .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
     .badge{padding:5px 9px;border-radius:999px;background:rgba(124,156,255,0.12);color:var(--primary-2);font-size:0.72rem;font-weight:700}
     footer{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted);font-size:0.8rem}
+    .courses-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .course-card { background:rgba(255,255,255,0.02); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    .course-card .level { display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(94,234,212,0.12); color:var(--primary-2); font-size:.72rem; font-weight:700; margin-bottom:12px; }
+    .course-card h3 { margin:0 0 10px; }
+    .course-card p { margin:0 0 14px; }
+    .course-card .price { color:var(--text); font-weight:700; }
     .footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted)}
     .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
     .chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--muted);cursor:pointer}
     .chip.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#07111d;border-color:transparent}
-    @media (max-width: 640px){.nav{flex-wrap:wrap}.hero-grid,.tool-grid{grid-template-columns:1fr}.nav-links{width:100%;justify-content:center}}</style>
+    @media (max-width: 640px){.nav{flex-wrap:wrap}.hero-grid,.tool-grid,.courses-grid{grid-template-columns:1fr}.nav-links{width:100%;justify-content:center}}</style>
 </head>
 <body>
   <header class="site-header">
@@ -48,6 +54,7 @@
       <a href="/index-en.html" class="brand"><span class="brand-mark">T</span><span>TOOLBAZAAR</span></a>
       <nav class="nav-links" aria-label="Main menu">
         <a href="#catalog">Catalog</a>
+        <a href="#courses">English courses</a>
         <a href="#pricing">Pricing</a>
         <a href="/privacy-policy-en.html">Privacy Policy</a>
       </nav>
@@ -68,7 +75,7 @@
           <p>ToolBazaar helps teams discover, compare and choose the best AI tools for marketing, design, coding, research and business operations.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#catalog">View 128 tools</a>
-            <a class="btn btn-secondary" href="#pricing">Get started</a>
+            <a class="btn btn-secondary" href="#courses">English courses</a>
           </div>
           <div class="stats">
             <div class="stat"><strong>128</strong><span>AI tools</span></div>
@@ -89,6 +96,33 @@
         </div>
       </div>
     </section>
+
+    <section id="courses">
+      <div class="container">
+        <h2>English language courses</h2>
+        <div class="courses-grid">
+          <article class="course-card">
+            <span class="level">Beginner</span>
+            <h3>Beginner English</h3>
+            <p>Build confidence with daily phrases, grammar, vocabulary and speaking practice.</p>
+            <div class="price">$120 / month</div>
+          </article>
+          <article class="course-card">
+            <span class="level">Intermediate</span>
+            <h3>Intermediate English</h3>
+            <p>Improve listening, reading, writing and natural conversation skills.</p>
+            <div class="price">$180 / month</div>
+          </article>
+          <article class="course-card">
+            <span class="level">Business</span>
+            <h3>Business English</h3>
+            <p>Prepare for meetings, presentations, emails and professional communication.</p>
+            <div class="price">$240 / month</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="catalog">
       <div class="container">
         <h2>AI Catalog</h2>
